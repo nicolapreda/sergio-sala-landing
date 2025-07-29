@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
         <title>Marketing Solutions Pro</title>
     </head>
-    <body class="font-serif text-white">
+    <body class="font-sans text-white">
 
         <!-- NAVBAR -->
         <nav
@@ -30,7 +30,7 @@
         <div class="h-16"></div>
 
         <!-- HEADER SEZIONE -->
-        <section class="py-20 px-4 text-center bg-gradient-to-br from-slate-50 to-indigo-50 font-serif">
+        <section class="py-20 px-4 text-center bg-gradient-to-br from-slate-50 to-indigo-50 font-sans">
             <h2
                 class="text-base uppercase tracking-widest text-indigo-600 mb-2">Scopri come:
             </h2>
@@ -45,26 +45,38 @@
 
             <p class="mb-8 text-sm text-slate-700">🚀 Scopri come accelerare la crescita della tua azienda</p>
 
-            <!-- Video container corretto -->
-            <div class="max-w-2xl mx-auto mb-12">
-                <script src="https://fast.wistia.com/player.js" async></script>
-                <script src="https://fast.wistia.com/embed/dxkveadnc5.js" async
-                    type="module"></script>
-
-                <style>
-    wistia-player[media-id='dxkveadnc5']:not(:defined) {
-      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/dxkveadnc5/swatch');
-      display: block;
-      filter: blur(5px);
-      padding-top: 56.25%;
-    }
-  </style>
-
-                <wistia-player
-                    media-id="dxkveadnc5"
-                    aspect="1.7777777777777777"
-                    player-color="#7c3aed">
-                </wistia-player>
+            <!-- Frase ad effetto -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white shadow-2xl border border-purple-200">
+                    <div class="text-center">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+                            "In 90 giorni trasformiamo la tua azienda da 
+                            <span class="text-yellow-300">invisibile</span> a 
+                            <span class="text-yellow-300">irresistibile</span>"
+                        </h3>
+                        <div class="flex items-center justify-center space-x-6 mt-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-yellow-300">+200%</div>
+                                <div class="text-sm opacity-90">Crescita media</div>
+                            </div>
+                            <div class="w-px h-12 bg-white opacity-30"></div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-yellow-300">90</div>
+                                <div class="text-sm opacity-90">Giorni di tempo</div>
+                            </div>
+                            <div class="w-px h-12 bg-white opacity-30"></div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-yellow-300">100%</div>
+                                <div class="text-sm opacity-90">Garanzia risultati</div>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-lg opacity-90">
+                            <i class="fas fa-quote-left text-yellow-300 mr-2"></i>
+                            Il metodo che ha già trasformato oltre 150 aziende italiane
+                            <i class="fas fa-quote-right text-yellow-300 ml-2"></i>
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Bottone visibile correttamente -->
@@ -137,7 +149,106 @@
             </div>
         </section>
 
-        <footer class="bg-gradient-to-r from-slate-900 to-indigo-900 text-gray-100 pt-12 pb-6 px-6 font-serif">
+        <!-- SEZIONE Q&A -->
+        <section class="bg-white text-slate-800 py-20 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-lg uppercase tracking-widest text-indigo-600 mb-2">Domande frequenti</h2>
+                    <h3 class="text-4xl font-bold mb-4">Risposte alle tue domande</h3>
+                    <p class="text-lg text-slate-600">Tutto quello che devi sapere sui nostri servizi di marketing strategico</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Q&A 1 -->
+                    <div class="border border-indigo-100 rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-colors focus:outline-none" onclick="toggleAccordion('qa1')">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-lg font-semibold text-slate-800">Quanto tempo serve per vedere i primi risultati?</h4>
+                                <i class="fas fa-chevron-down text-indigo-600 transform transition-transform duration-200" id="icon-qa1"></i>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 py-4 bg-white border-t border-indigo-100" id="qa1">
+                            <p class="text-slate-600">I primi risultati tangibili iniziano a manifestarsi entro 30-60 giorni dall'implementazione delle strategie. Tuttavia, per una crescita sostenibile e significativa, consigliamo un percorso di almeno 3-6 mesi per ottimizzare completamente tutti i canali di marketing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q&A 2 -->
+                    <div class="border border-indigo-100 rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-colors focus:outline-none" onclick="toggleAccordion('qa2')">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-lg font-semibold text-slate-800">Quali settori seguite principalmente?</h4>
+                                <i class="fas fa-chevron-down text-indigo-600 transform transition-transform duration-200" id="icon-qa2"></i>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 py-4 bg-white border-t border-indigo-100" id="qa2">
+                            <p class="text-slate-600">Lavoriamo con aziende di tutti i settori: e-commerce, servizi professionali, tecnologia, manifatturiero, healthcare e molto altro. Ogni strategia viene personalizzata in base alle specifiche esigenze del settore e del mercato di riferimento.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q&A 3 -->
+                    <div class="border border-indigo-100 rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-colors focus:outline-none" onclick="toggleAccordion('qa3')">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-lg font-semibold text-slate-800">Come funziona la consulenza gratuita?</h4>
+                                <i class="fas fa-chevron-down text-indigo-600 transform transition-transform duration-200" id="icon-qa3"></i>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 py-4 bg-white border-t border-indigo-100" id="qa3">
+                            <p class="text-slate-600">La consulenza gratuita è un incontro di 60 minuti dove analizziamo la tua situazione attuale, identifichiamo le opportunità di crescita e ti forniamo consigli concreti. Non c'è alcun impegno e riceverai già valore dalla prima chiamata.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q&A 4 -->
+                    <div class="border border-indigo-100 rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-colors focus:outline-none" onclick="toggleAccordion('qa4')">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-lg font-semibold text-slate-800">Quanto costa il vostro affiancamento?</h4>
+                                <i class="fas fa-chevron-down text-indigo-600 transform transition-transform duration-200" id="icon-qa4"></i>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 py-4 bg-white border-t border-indigo-100" id="qa4">
+                            <p class="text-slate-600">I nostri investimenti partono da €2.000/mese per PMI e variano in base alla complessità del progetto e agli obiettivi. Ogni proposta è personalizzata e include sempre un piano dettagliato con ROI previsto e milestone specifiche.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q&A 5 -->
+                    <div class="border border-indigo-100 rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-colors focus:outline-none" onclick="toggleAccordion('qa5')">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-lg font-semibold text-slate-800">Fornite anche formazione al team interno?</h4>
+                                <i class="fas fa-chevron-down text-indigo-600 transform transition-transform duration-200" id="icon-qa5"></i>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 py-4 bg-white border-t border-indigo-100" id="qa5">
+                            <p class="text-slate-600">Sì, includiamo sempre sessioni di formazione per il tuo team. Crediamo nell'autonomia dei nostri clienti e nel trasferimento delle competenze per garantire risultati duraturi anche oltre la nostra collaborazione.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q&A 6 -->
+                    <div class="border border-indigo-100 rounded-lg overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-colors focus:outline-none" onclick="toggleAccordion('qa6')">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-lg font-semibold text-slate-800">Come misurate il successo delle strategie?</h4>
+                                <i class="fas fa-chevron-down text-indigo-600 transform transition-transform duration-200" id="icon-qa6"></i>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 py-4 bg-white border-t border-indigo-100" id="qa6">
+                            <p class="text-slate-600">Utilizziamo KPI specifici per ogni progetto: ROI, costo acquisizione cliente, lifetime value, conversion rate e crescita del fatturato. Forniamo report mensili dettagliati e dashboard in tempo reale per monitorare tutti i progressi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA finale -->
+                <div class="text-center mt-12">
+                    <p class="text-lg text-slate-600 mb-6">Non hai trovato la risposta che cercavi?</p>
+                    <a href="./acquista.html" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold py-3 px-8 rounded-lg hover:from-indigo-700 hover:to-purple-700 transition shadow-lg">
+                        Richiedi una consulenza personalizzata
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gradient-to-r from-slate-900 to-indigo-900 text-gray-100 pt-12 pb-6 px-6 font-sans">
             <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
 
                 <!-- Logo + descrizione -->
@@ -215,6 +326,22 @@
                 </p>
             </div>
         </footer>
+
+        <!-- JavaScript per l'accordion Q&A -->
+        <script>
+            function toggleAccordion(id) {
+                const content = document.getElementById(id);
+                const icon = document.getElementById('icon-' + id);
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                } else {
+                    content.classList.add('hidden');
+                    icon.classList.remove('rotate-180');
+                }
+            }
+        </script>
 
     </body>
 </html>
