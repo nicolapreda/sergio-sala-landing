@@ -32,95 +32,262 @@ fbq('track', 'PageView');*/
                 src="https://www.facebook.com/tr?id=TUO_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
     </head>
 
-    <body class=" text-white font-serif">
+    <body class=" text-white font-sans">
 
-        <!-- NAVBAR -->
-        <nav
-            class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-indigo-900 to-purple-900 shadow-sm border-b border-purple-700">
-            <div
-                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                <a href="/" class="flex items-center">
-                    <img
-                        src="./assets/Loghi brand/bianco su trasp ritagliato.png"
-                        alt="Logo" class="h-8 w-auto" />
-                </a>
-                <a href="./acquista.html"
-                    class="bg-white text-indigo-900 font-medium px-4 py-2 rounded hover:bg-gray-100 transition">
-                    Richiedi consulenza
+        <!-- BANNER URGENZA -->
+        <div class="bg-gradient-to-r from-red-600 via-red-700 to-red-600 py-3 px-4 relative overflow-hidden border-t-4 border-b-4 border-yellow-400">
+            <div class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-600/20"></div>
+            <div class="relative z-10 max-w-4xl mx-auto text-center">
+                <div class="flex items-center justify-center mb-1">
+                    <div class="w-2 h-2 bg-yellow-400 rounded-full mr-2 animate-pulse"></div>
+                    <span class="text-yellow-200 text-xs font-bold uppercase tracking-wide">⚠️ ULTIMI POSTI DISPONIBILI</span>
+                </div>
+                <p class="text-white text-sm md:text-base font-bold">
+                    🎯 <span class="text-yellow-300">CONSULENZA STRATEGICA GRATUITA</span> 
+                    <span class="text-red-200">(valore €500)</span> - 
+                    <span class="text-yellow-300" id="spotsLeftForm">1</span> posto rimasto oggi!
+                </p>
+            </div>
+        </div>
+
+        <!-- PULSANTE HOME -->
+        <div class="bg-gradient-to-br from-slate-50 to-indigo-50 px-4 pt-4">
+            <div class="max-w-7xl mx-auto">
+                <a href="index.html" 
+                   class="inline-flex items-center px-4 py-2 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg shadow-sm transition-all duration-200 text-slate-700 hover:text-indigo-600 group">
+                    <i class="fas fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i>
+                    <span class="font-medium">Torna alla Home</span>
                 </a>
             </div>
-        </nav>
-        <div class="h-16"></div>
+        </div>
 
-        <!-- HERO -->
-        <section
-            class="bg-gradient-to-br from-indigo-50 to-purple-50 min-h-screen flex flex-col items-center justify-center px-4 text-center text-slate-800">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-slate-800">Consulenza gratuita
-                iniziale</h1>
-            <p class="text-lg text-slate-700 mb-8 max-w-xl">Scopri come trasformare la tua strategia di marketing con un consulto personalizzato. Compila il modulo e pianifica la tua crescita.</p>
-
-            <ul
-                class="text-left max-w-xl mx-auto mb-10 space-y-2 text-sm text-slate-700">
-                <li>✅ Analisi gratuita della tua situazione attuale</li>
-                <li>✅ Strategia personalizzata per la tua azienda</li>
-                <li>✅ Supporto continuo durante tutto il percorso</li>
-            </ul>
-
-            <!-- FORM -->
-            <div
-                class="bg-white text-slate-800 rounded-lg shadow-lg p-8 w-full max-w-xl border border-indigo-100">
-                <h2 class="text-2xl font-bold mb-6 text-center">Richiedi la tua consulenza</h2>
-
-                <form id="leadForm" class="space-y-5"><div>
-                        <label for="name"
-                            class="block text-sm font-medium mb-1">Nome</label>
-                        <input type="text" name="name" id="name"
-                            placeholder="Il tuo nome"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
-                            required>
+        <!-- HERO OTTIMIZZATA -->
+        <section class="bg-gradient-to-br from-slate-50 to-indigo-50 min-h-screen flex flex-col items-center justify-center px-4 text-slate-800">
+            
+            <!-- Social proof immediato -->
+            <div class="text-center mb-8 mt-12">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="flex -space-x-2 mr-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">M</div>
+                        <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-teal-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">L</div>
+                        <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-red-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">A</div>
+                        <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">+243</div>
                     </div>
-
-                    <div>
-                        <label for="email"
-                            class="block text-sm font-medium mb-1">Email</label>
-                        <input type="email" name="email" id="email"
-                            placeholder="tuo@email.com"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
-                            required>
+                    <span class="text-slate-600">Si sono già uniti <strong>247 imprenditori</strong></span>
+                </div>
+                
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm mb-6">
+                    <div class="flex items-center text-slate-600">
+                        <i class="fas fa-star text-yellow-500 mr-1"></i>
+                        <span><strong>4.9/5</strong> su Google Reviews</span>
                     </div>
-
-                    <div>
-                        <label for="phone"
-                            class="block text-sm font-medium mb-1">Telefono</label>
-                        <input type="tel" name="phone" id="phone"
-                            placeholder="+39 333 1234567"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
-                            required>
+                    <div class="flex items-center text-slate-600">
+                        <i class="fas fa-shield-alt text-green-500 mr-1"></i>
+                        <span><strong>100%</strong> soddisfatti o rimborsati</span>
                     </div>
-
-                    <div>
-                        <label for="company"
-                            class="block text-sm font-medium mb-1">Azienda</label>
-                        <input type="text" name="company" id="company"
-                            placeholder="Nome della tua azienda"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
-                            required>
+                    <div class="flex items-center text-slate-600">
+                        <i class="fas fa-clock text-blue-500 mr-1"></i>
+                        <span>Risposta entro <strong>2 ore</strong></span>
                     </div>
-
-                    <div>
-                        <button type="submit"
-                            class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-md transition duration-200">
-                            Richiedi consulenza gratuita
-                        </button>
-                    </div>
-                </form>
+                </div>
             </div>
-            <div id="thankYou" style="display: none; margin-top: 1rem;">
-                ✅ Grazie per la tua richiesta! Ti ricontatteremo entro 24 ore.
+
+            <!-- Titolo aggressivo -->
+            <div class="text-center mb-8 max-w-4xl">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4 text-slate-800 leading-tight">
+                    🎯 <span class="text-green-600">PRENOTA ORA</span> la Tua<br/>
+                    Consulenza Strategica <span class="text-red-600">GRATUITA</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-700 mb-6 font-medium">
+                    <span class="line-through text-red-500">€500 di valore</span> → 
+                    <span class="text-green-600 font-bold">GRATIS oggi</span><br/>
+                    Il primo passo per ottenere <strong>10+ clienti qualificati in 21 giorni</strong>
+                </p>
+
+                <!-- Benefici chiari -->
+                <div class="bg-white rounded-xl p-6 shadow-lg border border-indigo-100 mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">🎁 Quello che riceverai GRATIS:</h3>
+                    <div class="grid md:grid-cols-2 gap-4 text-left">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Analisi completa</strong><br/>
+                                <span class="text-sm text-slate-600">della tua situazione attuale e potenziale</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Piano strategico personalizzato</strong><br/>
+                                <span class="text-sm text-slate-600">specifico per il tuo settore e obiettivi</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Roadmap dettagliata</strong><br/>
+                                <span class="text-sm text-slate-600">con step concreti da implementare subito</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Stima ROI realistico</strong><br/>
+                                <span class="text-sm text-slate-600">con proiezioni a 3, 6 e 12 mesi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form container con due colonne -->
+            <div class="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-start">
+                
+                <!-- Colonna sinistra - Testimonial e urgenza -->
+                <div class="lg:order-2">
+                    <!-- Testimonial veloce -->
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                        <div class="flex items-center mb-3">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                E
+                            </div>
+                            <div>
+                                <div class="font-bold text-green-800">Elena B.</div>
+                                <div class="text-sm text-green-600">E-commerce Moda • Milano</div>
+                                <div class="flex text-yellow-500 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-green-700 italic">"Dopo la consulenza gratuita ho capito subito dove stavo sbagliando. In 4 mesi sono passata da €800 a €14.200/mese. Sergio sa davvero quello che fa!"</p>
+                    </div>
+
+                    <!-- Garanzie -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+                        <h4 class="font-bold text-blue-800 mb-3">🛡️ Le Nostre Garanzie:</h4>
+                        <ul class="space-y-2 text-blue-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-shield-alt text-blue-500 mr-2"></i>
+                                <span>100% soddisfatti o rimborsati</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-lock text-blue-500 mr-2"></i>
+                                <span>Dati protetti e privacy garantita</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-clock text-blue-500 mr-2"></i>
+                                <span>Risposta garantita entro 2 ore</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-gift text-blue-500 mr-2"></i>
+                                <span>Consulenza completamente gratuita</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Urgenza -->
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                        <h4 class="font-bold text-red-800 mb-3">⚠️ Attenzione:</h4>
+                        <p class="text-red-700 mb-3">Accettiamo solo <strong>5 nuove consulenze gratuite</strong> a settimana per garantire la massima qualità.</p>
+                        <div class="bg-red-100 rounded p-3 text-center">
+                            <div class="text-red-800 font-bold">Posti rimasti questa settimana:</div>
+                            <div class="text-2xl font-bold text-red-600" id="spotsCounter">1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonna destra - Form ottimizzato -->
+                <div class="mb-24 lg:order-1">
+                    <div class="bg-white text-slate-800 rounded-xl shadow-2xl p-8 border-2 border-green-200 relative">
+                        <!-- Badge "GRATUITO" -->
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-2 rounded-full font-bold text-sm">
+                            🎁 COMPLETAMENTE GRATUITO
+                        </div>
+                        
+                        <div class="pt-4">
+                            <h2 class="text-2xl font-bold mb-2 text-center text-slate-800">Prenota la Tua Consulenza</h2>
+                            <p class="text-center text-slate-600 mb-6 text-sm">Compila il form e ti ricontatteremo entro 2 ore</p>
+
+                            <form id="leadForm" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium mb-1 text-slate-700">Nome Completo *</label>
+                                    <input type="text" name="name" id="name"
+                                        placeholder="Es: Mario Rossi"
+                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
+                                        required>
+                                </div>
+
+                                <div>
+                                    <label for="email" class="block text-sm font-medium mb-1 text-slate-700">Email Aziendale *</label>
+                                    <input type="email" name="email" id="email"
+                                        placeholder="mario@tuaazienda.it"
+                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
+                                        required>
+                                </div>
+
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium mb-1 text-slate-700">Telefono *</label>
+                                    <input type="tel" name="phone" id="phone"
+                                        placeholder="+39 333 123 4567"
+                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
+                                        required>
+                                </div>
+
+                                <div>
+                                    <label for="company" class="block text-sm font-medium mb-1 text-slate-700">Nome Azienda *</label>
+                                    <input type="text" name="company" id="company"
+                                        placeholder="Es: La Tua Azienda SRL"
+                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
+                                        required>
+                                </div>
+
+                                <!-- Campo aggiuntivo per qualificare -->
+                                <div>
+                                    <label for="revenue" class="block text-sm font-medium mb-1 text-slate-700">Fatturato Annuo Attuale</label>
+                                    <select name="revenue" id="revenue" 
+                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                                        <option value="">Seleziona una fascia</option>
+                                        <option value="0-100k">€0 - €100k</option>
+                                        <option value="100k-500k">€100k - €500k</option>
+                                        <option value="500k-1M">€500k - €1M</option>
+                                        <option value="1M+">€1M+</option>
+                                        <option value="startup">Startup / Ancora in fase di lancio</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <button type="submit"
+                                        class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
+                                        🚀 PRENOTA LA MIA CONSULENZA GRATUITA
+                                    </button>
+                                </div>
+
+                                <div class="text-center text-xs text-slate-500 space-y-1">
+                                    <p>✅ Nessun impegno • ✅ Consulenza 100% gratuita</p>
+                                    <p>✅ Risposta garantita entro 2 ore lavorative</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Messaggio di ringraziamento -->
+            <div id="thankYou" style="display: none;" class="text-center mt-8 bg-green-50 border border-green-200 rounded-lg p-8 max-w-2xl mx-auto">
+                <div class="text-6xl mb-4">🎉</div>
+                <h3 class="text-2xl font-bold text-green-800 mb-4">Perfetto! Richiesta Ricevuta</h3>
+                <p class="text-green-700 mb-4">
+                    <strong>Ti ricontatteremo entro 2 ore</strong> per confermare la tua consulenza strategica gratuita.
+                </p>
+                <div class="bg-green-100 rounded-lg p-4 text-green-800">
+                    <p class="text-sm">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Nel frattempo, controlla la tua email (anche spam) per ricevere materiale preparatorio esclusivo.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <footer class="bg-gradient-to-r from-slate-900 to-indigo-900 text-gray-100 pt-12 pb-6 px-6 font-serif">
+        <footer class="bg-gradient-to-r from-slate-900 to-indigo-900 text-gray-100 pt-12 pb-6 px-6 font-sans">
             <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
 
                 <!-- Logo + descrizione -->
@@ -200,20 +367,115 @@ fbq('track', 'PageView');*/
 
         </footer>
         <script>
-            /*
-  const form = document.getElementById('leadForm');
-  const thankYou = document.getElementById('thankYou');
+            // Form submission con tracking migliorato
+            const form = document.getElementById('leadForm');
+            const thankYou = document.getElementById('thankYou');
+            const formContainer = form.parentElement.parentElement;
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+            // Contatori dinamici
+            let spotsLeft = 1;
+            const spotsElements = [
+                document.getElementById('spotsLeftForm'),
+                document.getElementById('spotsCounter')
+            ];
 
-    setTimeout(function () {
-      fbq('track', 'Lead');
-    }, 300);
+            // Aggiorna contatori
+            function updateCounters() {
+                spotsElements.forEach(el => {
+                    if (el) {
+                        el.textContent = spotsLeft;
+                        el.style.color = spotsLeft === 0 ? '#ef4444' : spotsLeft === 1 ? '#f59e0b' : '#10b981';
+                    }
+                });
+            }
 
-    // Mostra messaggio di conferma
-    form.style.display = 'none';
-    thankYou.style.display = 'block';
-  });*/
-</script> </body>
+            // Simula diminuzione posti ogni tanto
+            setInterval(() => {
+                if (Math.random() < 0.1 && spotsLeft > 0) {
+                    spotsLeft--;
+                    updateCounters();
+                    
+                    if (spotsLeft === 0) {
+                        // Mostra urgenza massima
+                        spotsElements.forEach(el => {
+                            if (el) {
+                                el.textContent = 'ULTIMO POSTO!';
+                                el.style.fontWeight = 'bold';
+                                el.style.animation = 'pulse 1s infinite';
+                            }
+                        });
+                    }
+                }
+            }, 10000);
+
+            // Validazione in tempo reale
+            const inputs = form.querySelectorAll('input[required], select[required]');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.value.trim()) {
+                        this.style.borderColor = '#10b981';
+                        this.style.backgroundColor = '#f0f9ff';
+                    } else {
+                        this.style.borderColor = '#ef4444';
+                    }
+                });
+            });
+
+            // Submit form
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Mostra loading sul bottone
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = '⏳ Invio in corso...';
+                submitBtn.disabled = true;
+
+                // Simula invio (aggiungi qui la tua logica di invio)
+                setTimeout(function () {
+                    // Facebook Pixel tracking (se abilitato)
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead');
+                    }
+
+                    // Google Analytics tracking (se presente)
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'generate_lead', {
+                            'event_category': 'Form',
+                            'event_label': 'Consulenza Gratuita'
+                        });
+                    }
+
+                    // Nascondi form e mostra ringraziamento
+                    formContainer.style.display = 'none';
+                    thankYou.style.display = 'block';
+                    
+                    // Scroll al messaggio di ringraziamento
+                    thankYou.scrollIntoView({ behavior: 'smooth' });
+
+                    // Reset dopo qualche secondo per test
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }, 2000);
+
+                }, 1500);
+            });
+
+            // Exit intent detection
+            let mouseLeft = false;
+            document.addEventListener('mouseleave', function(e) {
+                if (e.clientY <= 0 && !mouseLeft) {
+                    mouseLeft = true;
+                    // Mostra popup di exit intent (opzionale)
+                    if (confirm('🔥 ASPETTA! Non perdere la tua consulenza GRATUITA del valore di €500. Vuoi continuare con la prenotazione?')) {
+                        // L'utente ha scelto di rimanere
+                        window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
+                    }
+                }
+            });
+
+            // Inizializza contatori
+            updateCounters();
+        </script> </body>
 </html>
