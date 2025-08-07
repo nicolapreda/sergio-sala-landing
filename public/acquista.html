@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
     <head>
-        <meta charset="UTF-8" />
+        <met                    <!-- Logo e nome -->
+                    <div class="flex items-center space-x-3">
+                        <img src="./assets/logo.png" alt="SSA Agency" class="h-10 w-auto" />
+                        <div>
+                            <h1 class="text-lg font-bold text-slate-800">SSA AGENCY</h1>
+                            <p class="text-xs text-slate-600">Marketing Strategico</p>
+                        </div>
+                    </div>t="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Richiedi Consulenza - Sergio Sala Agency</title>
+        <title>Richiedi Consulenza - SSA Agency</title>
         <link href="./assets/style.css" rel="stylesheet" />
         <link rel="icon" href="./assets/logo.png"
             type="image/x-icon" />
@@ -246,27 +253,6 @@ fbq('track', 'PageView');*/
                                         required>
                                 </div>
 
-                                <div>
-                                    <label for="company" class="block text-sm font-medium mb-1 text-slate-700">Nome Azienda *</label>
-                                    <input type="text" name="company" id="company"
-                                        placeholder="Es: La Tua Azienda SRL"
-                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
-                                        required>
-                                </div>
-
-                                <!-- Campo aggiuntivo per qualificare -->
-                                <div>
-                                    <label for="revenue" class="block text-sm font-medium mb-1 text-slate-700">Fatturato Annuo Attuale</label>
-                                    <select name="revenue" id="revenue" 
-                                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
-                                        <option value="">Seleziona una fascia</option>
-                                        <option value="0-100k">€0 - €100k</option>
-                                        <option value="100k-500k">€100k - €500k</option>
-                                        <option value="500k-1M">€500k - €1M</option>
-                                        <option value="1M+">€1M+</option>
-                                        <option value="startup">Startup / Ancora in fase di lancio</option>
-                                    </select>
-                                </div>
 
                                 <div>
                                     <button type="submit"
@@ -370,7 +356,7 @@ fbq('track', 'PageView');*/
             <!-- Footer bottom -->
             <div
                 class="text-center text-xs text-gray-400 max-w-4xl mx-auto px-4">
-                <p class="mb-2">© <span id="currentYear"></span> Sergio Sala Agency. Tutti i diritti riservati.</p>
+                <p class="mb-2">© <span id="currentYear"></span> SSA Agency. Tutti i diritti riservati.</p>
                 <script>
       document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
