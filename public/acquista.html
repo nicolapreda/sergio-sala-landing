@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
     <head>
-        <met                    <!-- Logo e nome -->
-                    <div class="flex items-center space-x-3">
-                        <img src="./assets/logo.png" alt="SSA Agency" class="h-10 w-auto" />
-                        <div>
-                            <h1 class="text-lg font-bold text-slate-800">SSA AGENCY</h1>
-                            <p class="text-xs text-slate-600">Marketing Strategico</p>
-                        </div>
-                    </div>t="UTF-8" />
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Richiedi Consulenza - SSA Agency</title>
         <link href="./assets/style.css" rel="stylesheet" />
@@ -39,7 +32,7 @@ fbq('track', 'PageView');*/
                 src="https://www.facebook.com/tr?id=TUO_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
     </head>
 
-    <body class=" text-white font-sans">
+    <body class=" text-white font-sans ">
 
         <!-- BANNER URGENZA -->
         <div class="bg-gradient-to-r from-red-600 via-red-700 to-red-600 py-3 px-4 relative overflow-hidden border-t-4 border-b-4 border-yellow-400">
@@ -63,9 +56,9 @@ fbq('track', 'PageView');*/
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo e nome -->
                     <div class="flex items-center space-x-3">
-                        <img src="./assets/logo.png" alt="Sergio Sala Agency" class="h-10 w-auto" />
+                        <img src="./assets/logo.png" alt="SSA Agency" class="h-10 w-auto" />
                         <div>
-                            <h1 class="text-lg font-bold text-slate-800">SERGIO SALA AGENCY</h1>
+                            <h1 class="text-lg font-bold text-slate-800">SSA AGENCY</h1>
                             <p class="text-xs text-slate-600">Marketing Strategico & Crescita Aziendale</p>
                         </div>
                     </div>
@@ -182,28 +175,6 @@ fbq('track', 'PageView');*/
                         <p class="text-green-700 italic">"Dopo la consulenza gratuita ho capito subito dove stavo sbagliando. In 4 mesi sono passata da €800 a €14.200/mese. Sergio sa davvero quello che fa!"</p>
                     </div>
 
-                    <!-- Garanzie -->
-                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-                        <h4 class="font-bold text-blue-800 mb-3">🛡️ Le Nostre Garanzie:</h4>
-                        <ul class="space-y-2 text-blue-700">
-                            <li class="flex items-center">
-                                <i class="fas fa-shield-alt text-blue-500 mr-2"></i>
-                                <span>100% soddisfatti o rimborsati</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-lock text-blue-500 mr-2"></i>
-                                <span>Dati protetti e privacy garantita</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-clock text-blue-500 mr-2"></i>
-                                <span>Risposta garantita entro 2 ore</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-gift text-blue-500 mr-2"></i>
-                                <span>Consulenza completamente gratuita</span>
-                            </li>
-                        </ul>
-                    </div>
 
                     <!-- Urgenza -->
                     <div class="bg-red-50 border border-red-200 rounded-lg p-6">
@@ -287,13 +258,13 @@ fbq('track', 'PageView');*/
             </div>
         </section>
 
-        <footer class="bg-gradient-to-r from-slate-900 to-red-900 text-gray-100 pt-12 pb-6 px-6 font-sans">
+        <footer class="bg-gradient-to-r bg-gray-900 text-gray-100 pt-12 pb-6 px-6 font-sans">
             <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
 
                 <!-- Logo + descrizione -->
                 <div>
                     <h2
-                        class="text-2xl font-bold tracking-wide text-white">SERGIO SALA<br />AGENCY</h2>
+                        class="text-2xl font-bold tracking-wide text-white">SSA AGENCY</h2>
                     <p class="mt-3 text-gray-300">Affiancamento marketing strategico per aziende che vogliono crescere e innovare nel mercato digitale.</p>
                     <div class="flex space-x-4 mt-4 text-gray-300">
                         <a href="#"><i
@@ -364,9 +335,11 @@ fbq('track', 'PageView');*/
                     <strong class="text-white">Nota:</strong> I risultati delle strategie di marketing possono variare in base al settore, alla concorrenza e all'implementazione. Le testimonianze riportate sono reali ma non garantiscono risultati identici. Ogni strategia viene personalizzata in base alle specifiche esigenze aziendali.
                 </p>
             </div>
-
         </footer>
-        <script>
+
+
+
+<script>
             // Form submission con tracking migliorato
             const form = document.getElementById('leadForm');
             const thankYou = document.getElementById('thankYou');
@@ -461,20 +434,6 @@ fbq('track', 'PageView');*/
 
                 }, 1500);
             });
-
-            // Exit intent detection
-            let mouseLeft = false;
-            document.addEventListener('mouseleave', function(e) {
-                if (e.clientY <= 0 && !mouseLeft) {
-                    mouseLeft = true;
-                    // Mostra popup di exit intent (opzionale)
-                    if (confirm('🔥 ASPETTA! Non perdere la tua consulenza GRATUITA del valore di €500. Vuoi continuare con la prenotazione?')) {
-                        // L'utente ha scelto di rimanere
-                        window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
-                    }
-                }
-            });
-
             // Inizializza contatori
             updateCounters();
         </script> </body>
