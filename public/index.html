@@ -4,99 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="./assets/style.css" rel="stylesheet" />
-        <link rel="icon" href="./assets/logo.png" type="image/x-icon" />
+        <link rel="icon" href="./assets/logo.png"
+            type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
         <script src="./assets/spots-counter.js"></script>
-        
-        <!-- SEO Ottimizzato per consulenza -->
-        <title>Consulenza Strategica Gratuita (€500) - Solo 5 Posti | SSA Agency</title>
-        <meta name="description" content="Trasforma il tuo business con una consulenza strategica gratuita del valore di €500. Analizziamo la tua azienda e ti mostriamo come generare clienti ogni mese. Solo 5 posti disponibili oggi." />
-        <meta name="keywords" content="consulenza strategica gratuita, marketing business, acquisizione clienti, crescita aziendale, consulenza marketing" />
-        
-        <!-- Open Graph per social media -->
-        <meta property="og:title" content="Consulenza Strategica Gratuita (€500) - Solo 5 Posti Oggi" />
-        <meta property="og:description" content="Scopri come trasformare il tuo business con una consulenza strategica personalizzata. Analisi gratuita + piano d'azione concreto." />
-        <meta property="og:image" content="./assets/logo.png" />
-        <meta property="og:type" content="website" />
-        
-        <!-- Meta Pixel Code - IMPORTANTE: Sostituire con il tuo Pixel ID -->
-        <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        
-        // SOSTITUIRE 'YOUR_PIXEL_ID' con il tuo vero Pixel ID
-        fbq('init', 'YOUR_PIXEL_ID');
-        fbq('track', 'PageView');
-        
-        // Eventi custom per il funnel di consulenza
-        fbq('track', 'ViewContent', {
-            content_name: 'Landing Consulenza Strategica',
-            content_category: 'Consulenza',
-            value: 500,
-            currency: 'EUR'
-        });
-        </script>
-        <noscript>
-            <img height="1" width="1" style="display:none" 
-                 src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" />
-        </noscript>
-        
-        <!-- Google Analytics 4 - IMPORTANTE: Sostituire con il tuo GA4 ID -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          
-          // SOSTITUIRE 'GA_MEASUREMENT_ID' con il tuo vero GA4 ID
-          gtag('config', 'GA_MEASUREMENT_ID', {
-            // Eventi enhanced per e-commerce
-            send_page_view: true,
-            // UTM tracking automatico
-            custom_map: {
-              'custom_parameter_1': 'utm_source',
-              'custom_parameter_2': 'utm_medium',
-              'custom_parameter_3': 'utm_campaign'
-            }
-          });
-          
-          // Track landing view con valore
-          gtag('event', 'page_view', {
-            page_title: 'Consulenza Strategica Landing',
-            page_location: window.location.href,
-            content_group1: 'Landing Pages',
-            custom_parameter_4: 'Consulenza'
-          });
-        </script>
-        
-        <!-- Schema.org Structured Data per SEO -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Consulenza Strategica Business",
-          "description": "Consulenza strategica gratuita per la crescita aziendale e l'acquisizione di nuovi clienti",
-          "provider": {
-            "@type": "Organization",
-            "name": "SSA Agency",
-            "url": "https://tuodominio.com"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR",
-            "description": "Consulenza strategica gratuita del valore di 500€"
-          },
-          "areaServed": "IT",
-          "availableLanguage": "it"
-        }
-        </script>
+        <title>SSA Agency</title>
     </head>
     <body class="font-sans text-white">
 
@@ -246,13 +158,6 @@
                 Trasforma il tuo business con una <br><span class="text-red-600">Consulenza Strategica Gratuita</span><br/>
                 <span class="text-yellow-600">(valore €500)</span>
             </h1>
-
-            <!-- Badge urgenza e scarsità -->
-            <div class="inline-flex items-center bg-red-100 border-2 border-red-500 rounded-full px-6 py-2 mb-6">
-                <div class="w-3 h-3 bg-red-500 rounded-full mr-3 animate-pulse"></div>
-                <span class="text-red-700 font-bold text-lg">SOLO 5 POSTI DISPONIBILI OGGI</span>
-            </div>
-
             <!-- Subheadline con valore specifico -->
             <p class="text-xl md:text-2xl text-slate-700 mb-8 font-medium max-w-4xl mx-auto">
                 In questa sessione <strong>analizziamo la tua azienda</strong>, individuiamo errori costosi e ti mostriamo il metodo con cui <strong>generiamo clienti ogni mese</strong> per decine di imprese come la tua
@@ -348,6 +253,16 @@
                     </div>
                 </div>
 
+                <!-- Box valore aggiunto -->
+                <div class="bg-gradient-to-r from-red-600 to-yellow-600 rounded-2xl p-8 mt-16 text-white text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-yellow-700/20"></div>
+                    <div class="relative z-10">
+                        <h4 class="text-2xl font-bold mb-4">🎁 BONUS ESCLUSIVO</h4>
+                        <p class="text-lg mb-4">
+                            In più riceverai accesso a <strong>risorse gratuite</strong> (mini-formazione e materiali esclusivi) che potrai usare subito per implementare la strategia.
+                        </p>
+                    </div>
+                </div>
 
                 <!-- CTA centrale rinforzata -->
                 <div class="text-center mt-16">
@@ -641,9 +556,9 @@
         </section>
 
         <!-- 4. SEZIONE GARANZIA - Abbatte le obiezioni -->
-        <section class=" py-20 px-4">
+        <section class="py-20 px-12">
             <div class="max-w-4xl mx-auto text-center">
-                <div class="bg-white rounded-2xl p-8 md:p-12 lg:p-16 shadow-2xl border-2 border-green-200">
+                <div class="bg-white rounded-2xl p-12 shadow-2xl border-2 border-green-200">
                     <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
                         <i class="fas fa-shield-check text-white text-3xl"></i>
                     </div>
@@ -662,7 +577,7 @@
                     </p>
 
                     <!-- Lista benefici garantiti -->
-                    <div class="grid md:grid-cols-2 gap-6 mb-8 px-4">
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
                         <div class="flex items-center justify-center md:justify-start">
                             <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3">
                                 <i class="fas fa-check text-white text-sm"></i>
@@ -689,29 +604,15 @@
                         </div>
                     </div>
 
-                    <!-- Testimonianza sulla qualità della consulenza -->
-                    <div class="bg-green-50 rounded-xl p-6 mb-8 border border-green-200 mx-4">
-                        <p class="text-slate-700 italic mb-4">
-                            "Pensavo fosse la solita chiamata commerciale. Invece ho ricevuto più valore in 45 minuti 
-                            che in anni di tentativi da solo. Anche se non avessi mai lavorato con loro, 
-                            la consulenza da sola valeva oro."
-                        </p>
-                        <div class="flex items-center justify-center">
-                            <div class="flex text-yellow-500 text-sm mr-2">★★★★★</div>
-                            <span class="text-slate-600 text-sm font-semibold">- Marco T., Imprenditore</span>
-                        </div>
-                    </div>
 
                     <!-- CTA garanzia -->
-                    <div class="px-4">
-                        <a href="./acquista.html" class="inline-block bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-10 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-xl text-xl">
-                            ✅ PRENOTA SENZA RISCHI LA TUA CONSULENZA GRATUITA
-                        </a>
-                        
-                        <p class="text-sm text-slate-500 mt-4">
-                            💡 Nel peggiore dei casi, avrai comunque una strategia gratuita del valore di €500
-                        </p>
-                    </div>
+                    <a href="./acquista.html" class="inline-block bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-10 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-xl text-xl">
+                        ✅ PRENOTA SENZA RISCHI LA TUA CONSULENZA GRATUITA
+                    </a>
+                    
+                    <p class="text-sm text-slate-500 mt-4">
+                        💡 Nel peggiore dei casi, avrai comunque una strategia gratuita del valore di €500
+                    </p>
                 </div>
             </div>
         </section>

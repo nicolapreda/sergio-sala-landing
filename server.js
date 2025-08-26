@@ -10,7 +10,7 @@ app.use(express.json());
 // Serve i file statici (HTML, CSS, JS, immagini)
 app.use(express.static(path.join(__dirname, 'public')));
 
-/*
+
 app.post('/submit-form', async (req, res) => {
   const { name, email, phone } = req.body;
 
@@ -19,7 +19,7 @@ app.post('/submit-form', async (req, res) => {
     const response = await fetch("https://api.gohighlevel.com/v1/contacts/", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer LA_TUA_API_KEY_GHL",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6Ink3VjE1YmlaaXYyaHFsY2Q2SmFQIiwidmVyc2lvbiI6MSwiaWF0IjoxNzU2MTk3NDA2OTY2LCJzdWIiOiJTVTFnUGpSd1Z2MEtWV1E5ZHRJMSJ9.ovbdnfxmp3mIdnckMiTfC-5HlxH_wAEe3x-tmaE3NYo",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
@@ -42,7 +42,7 @@ app.post('/submit-form', async (req, res) => {
     res.status(500).send("Errore server");
   }
 });
-*/
+
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, '0.0.0.0', () => console.log(`🚀 Server attivo su http://0.0.0.0:${PORT}`));

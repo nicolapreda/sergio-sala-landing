@@ -5,21 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="./assets/style.css" rel="stylesheet" />
         <link rel="icon" href="./assets/logo.png" type="image/x-icon" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
         <script src="./assets/spots-counter.js"></script>
 
         <!-- SEO Ottimizzato per form consulenza -->
         <title>Prenota Consulenza Strategica Gratuita (€500) - SSA Agency</title>
-        <meta name="description" content="Compila il form e prenota la tua consulenza strategica gratuita del valore di €500. Analisi personalizzata + piano d'azione concreto per far crescere il tuo business." />
-        <meta name="keywords" content="prenota consulenza gratuita, form consulenza strategica, marketing business, crescita aziendale" />
-        
+        <meta name="description"
+            content="Compila il form e prenota la tua consulenza strategica gratuita del valore di €500. Analisi personalizzata + piano d'azione concreto per far crescere il tuo business." />
+        <meta name="keywords"
+            content="prenota consulenza gratuita, form consulenza strategica, marketing business, crescita aziendale" />
+
         <!-- Open Graph per social media -->
-        <meta property="og:title" content="Prenota la Tua Consulenza Strategica Gratuita (€500)" />
-        <meta property="og:description" content="Form di prenotazione per consulenza strategica gratuita. Analisi personalizzata + piano d'azione concreto." />
+        <meta property="og:title"
+            content="Prenota la Tua Consulenza Strategica Gratuita (€500)" />
+        <meta property="og:description"
+            content="Form di prenotazione per consulenza strategica gratuita. Analisi personalizzata + piano d'azione concreto." />
         <meta property="og:image" content="./assets/logo.png" />
         <meta property="og:type" content="website" />
 
-        <!-- Meta Pixel Code - IMPORTANTE: Sostituire con il tuo Pixel ID -->
+        <!-- Meta Pixel Code -->
         <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -29,58 +34,37 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        
-        // SOSTITUIRE 'YOUR_PIXEL_ID' con il tuo vero Pixel ID
-        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('init', '1271585887977769');
         fbq('track', 'PageView');
-        
-        // Track arrivo sulla pagina di conversione
-        fbq('track', 'InitiateCheckout', {
-            content_name: 'Form Consulenza Strategica',
-            content_category: 'Lead Generation',
-            value: 500,
-            currency: 'EUR'
-        });
         </script>
-        <noscript>
-            <img height="1" width="1" style="display:none" 
-                 src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" />
-        </noscript>
-        
-        <!-- Google Analytics 4 - IMPORTANTE: Sostituire con il tuo GA4 ID -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          
-          // SOSTITUIRE 'GA_MEASUREMENT_ID' con il tuo vero GA4 ID
-          gtag('config', 'GA_MEASUREMENT_ID');
-          
-          // Track arrivo su form consulenza
-          gtag('event', 'begin_checkout', {
-            currency: 'EUR',
-            value: 500,
-            content_type: 'consulenza',
-            content_name: 'Form Consulenza Strategica'
-          });
-        </script>
+        <noscript><img height="1" width="1" style="display:none"
+                src="https://www.facebook.com/tr?id=1271585887977769&ev=PageView&noscript=1" /></noscript>
+        <!-- End Meta Pixel Code -->
+
     </head>
-
+    
     <body class=" text-white font-sans ">
-
         <!-- BANNER URGENZA - Allineato alla homepage -->
-        <div class="bg-gradient-to-r from-red-600 via-red-700 to-red-600 py-3 px-4 relative overflow-hidden border-t-4 border-b-4 border-yellow-400" data-urgency>
-            <div class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-600/20"></div>
+        <div
+            class="bg-gradient-to-r from-red-600 via-red-700 to-red-600 py-3 px-4 relative overflow-hidden border-t-4 border-b-4 border-yellow-400"
+            data-urgency>
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-600/20"></div>
             <div class="relative z-10 max-w-4xl mx-auto text-center">
                 <div class="flex items-center justify-center mb-1">
-                    <div class="w-2 h-2 bg-yellow-400 rounded-full mr-2 animate-pulse"></div>
-                    <span class="text-yellow-200 text-xs font-bold uppercase tracking-wide">⚠️ ULTIMI POSTI DISPONIBILI</span>
+                    <div
+                        class="w-2 h-2 bg-yellow-400 rounded-full mr-2 animate-pulse"></div>
+                    <span
+                        class="text-yellow-200 text-xs font-bold uppercase tracking-wide">⚠️
+                        ULTIMI POSTI DISPONIBILI</span>
                 </div>
                 <p class="text-white text-sm md:text-base font-bold">
-                    🎯 <span class="text-yellow-300">CONSULENZA STRATEGICA GRATUITA</span> 
-                    <span class="text-red-200">(valore €500)</span> - 
-                    <span class="text-yellow-300" id="spotsLeftForm">5</span> <span data-spots-text="{spots} posti rimasti oggi!">posti rimasti oggi!</span>
+                    🎯 <span class="text-yellow-300">CONSULENZA STRATEGICA
+                        GRATUITA</span>
+                    <span class="text-red-200">(valore €500)</span> -
+                    <span class="text-yellow-300" id="spotsLeftForm">5</span>
+                    <span data-spots-text="{spots} posti rimasti oggi!">posti
+                        rimasti oggi!</span>
                 </p>
                 <p class="text-yellow-100 text-xs mt-1">
                     ⏰ Compila il form ora per garantirti il tuo posto
@@ -94,18 +78,22 @@
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo e nome -->
                     <div class="flex items-center space-x-3">
-                        <img src="./assets/logo.png" alt="SSA Agency" class="h-10 w-auto" />
+                        <img src="./assets/logo.png" alt="SSA Agency"
+                            class="h-10 w-auto" />
                         <div>
-                            <h1 class="text-lg font-bold text-slate-800">SSA AGENCY</h1>
-                            <p class="text-xs text-slate-600">Marketing Strategico & Crescita Aziendale</p>
+                            <h1 class="text-lg font-bold text-slate-800">SSA
+                                AGENCY</h1>
+                            <p class="text-xs text-slate-600">Marketing
+                                Strategico & Crescita Aziendale</p>
                         </div>
                     </div>
-                    
+
                     <!-- Link torna alla home -->
                     <div class="flex items-center space-x-4">
-                        <a href="index.html" 
-                           class="inline-flex items-center px-4 py-2 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg shadow-sm transition-all duration-200 text-slate-700 hover:text-red-600 group">
-                            <i class="fas fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i>
+                        <a href="index.html"
+                            class="inline-flex items-center px-4 py-2 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg shadow-sm transition-all duration-200 text-slate-700 hover:text-red-600 group">
+                            <i
+                                class="fas fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i>
                             <span class="font-medium">Torna alla Home</span>
                         </a>
                     </div>
@@ -114,21 +102,28 @@
         </nav>
 
         <!-- HERO OTTIMIZZATA -->
-        <section class="bg-gradient-to-br from-slate-50 to-indigo-50 min-h-screen flex flex-col items-center justify-center px-4 text-slate-800">
-            
+        <section
+            class="bg-gradient-to-br from-slate-50 to-indigo-50 min-h-screen flex flex-col items-center justify-center px-4 text-slate-800">
+
             <!-- Social proof immediato -->
             <div class="text-center mb-8 mt-12">
                 <div class="flex items-center justify-center mb-4">
                     <div class="flex -space-x-2 mr-3">
-                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">M</div>
-                        <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-teal-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">L</div>
-                        <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-red-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">A</div>
-                        <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">+243</div>
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">M</div>
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-green-500 to-teal-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">L</div>
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-pink-500 to-red-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">A</div>
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full border-2 border-white flex items-center justify-center text-white text-sm font-bold">+243</div>
                     </div>
-                    <span class="text-slate-600">Si sono già uniti <strong>247 imprenditori</strong></span>
+                    <span class="text-slate-600">Si sono già uniti <strong>247
+                            imprenditori</strong></span>
                 </div>
-                
-                <div class="flex flex-wrap items-center justify-center gap-6 text-sm mb-6">
+
+                <div
+                    class="flex flex-wrap items-center justify-center gap-6 text-sm mb-6">
                     <div class="flex items-center text-slate-600">
                         <i class="fas fa-star text-yellow-500 mr-1"></i>
                         <span><strong>4.9/5</strong> su Google Reviews</span>
@@ -142,57 +137,81 @@
 
             <!-- Titolo ottimizzato per consulenza strategica -->
             <div class="text-center mb-8 max-w-4xl">
-                <h1 class="text-3xl md:text-5xl font-bold mb-4 text-slate-800 leading-tight">
-                    🎯 <span class="text-green-600">COMPILA IL FORM</span> e Prenota<br/>
-                    la Tua Consulenza Strategica <span class="text-red-600">GRATUITA</span>
+                <h1
+                    class="text-3xl md:text-5xl font-bold mb-4 text-slate-800 leading-tight">
+                    🎯 <span class="text-green-600">COMPILA IL FORM</span> e
+                    Prenota<br />
+                    la Tua Consulenza Strategica <span
+                        class="text-red-600">GRATUITA</span>
                 </h1>
-                
+
                 <p class="text-lg md:text-xl text-slate-700 mb-6 font-medium">
-                    <span class="line-through text-red-500">€500 di valore</span> → 
-                    <span class="text-green-600 font-bold">GRATIS oggi</span><br/>
-                    <strong>In 45 minuti analizziamo la tua azienda</strong> e ti mostriamo come generare clienti ogni mese
+                    <span class="line-through text-red-500">€500 di
+                        valore</span> →
+                    <span class="text-green-600 font-bold">GRATIS
+                        oggi</span><br />
+                    <strong>In 45 minuti analizziamo la tua azienda</strong> e
+                    ti mostriamo come generare clienti ogni mese
                 </p>
 
                 <!-- Benefici chiari della consulenza -->
-                <div class="bg-white rounded-xl p-6 shadow-lg border border-red-200 mb-8">
-                    <h3 class="text-xl font-bold mb-4 text-slate-800">🎁 Quello che riceverai nella CONSULENZA GRATUITA:</h3>
+                <div
+                    class="bg-white rounded-xl p-6 shadow-lg border border-red-200 mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">🎁 Quello
+                        che riceverai nella CONSULENZA GRATUITA:</h3>
                     <div class="grid md:grid-cols-2 gap-4 text-left">
                         <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <i
+                                class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
                             <div>
-                                <strong>🔍 Analisi personalizzata</strong><br/>
-                                <span class="text-sm text-slate-600">della tua presenza online e opportunità nascoste</span>
+                                <strong>🔍 Analisi personalizzata</strong><br />
+                                <span class="text-sm text-slate-600">della tua
+                                    presenza online e opportunità
+                                    nascoste</span>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <i
+                                class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
                             <div>
-                                <strong>🚀 Strategia su misura</strong><br/>
-                                <span class="text-sm text-slate-600">per acquisire nuovi clienti nei prossimi 90 giorni</span>
+                                <strong>🚀 Strategia su misura</strong><br />
+                                <span class="text-sm text-slate-600">per
+                                    acquisire nuovi clienti nei prossimi 90
+                                    giorni</span>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <i
+                                class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
                             <div>
-                                <strong>📊 Esempi pratici</strong><br/>
-                                <span class="text-sm text-slate-600">di campagne che stanno già funzionando nel tuo settore</span>
+                                <strong>📊 Esempi pratici</strong><br />
+                                <span class="text-sm text-slate-600">di campagne
+                                    che stanno già funzionando nel tuo
+                                    settore</span>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <i
+                                class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
                             <div>
-                                <strong>🎯 Piano d'azione immediato</strong><br/>
-                                <span class="text-sm text-slate-600">con i primi 3 step da implementare subito</span>
+                                <strong>🎯 Piano d'azione
+                                    immediato</strong><br />
+                                <span class="text-sm text-slate-600">con i primi
+                                    3 step da implementare subito</span>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Bonus materiali -->
-                    <div class="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                    <div
+                        class="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
                         <div class="text-center">
-                            <h4 class="font-bold text-yellow-800 mb-2">🎁 BONUS ESCLUSIVO</h4>
+                            <h4 class="font-bold text-yellow-800 mb-2">🎁 BONUS
+                                ESCLUSIVO</h4>
                             <p class="text-sm text-yellow-700">
-                                <strong>Mini-formazione gratuita</strong> + template e checklist operative da utilizzare immediatamente
+                                <strong>Mini-formazione gratuita</strong> +
+                                template e checklist operative da utilizzare
+                                immediatamente
                             </p>
                         </div>
                     </div>
@@ -200,20 +219,26 @@
             </div>
 
             <!-- Form container con due colonne -->
-            <div class="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-start">
-                
+            <div
+                class="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-start">
+
                 <!-- Colonna sinistra - Testimonial e urgenza -->
                 <div class="lg:order-2">
                     <!-- Testimonial sulla consulenza gratuita -->
-                    <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                    <div
+                        class="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
                         <div class="flex items-center mb-3">
-                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                            <div
+                                class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                 M
                             </div>
                             <div>
-                                <div class="font-bold text-green-800">Marco T.</div>
-                                <div class="text-sm text-green-600">Centro Benessere • Milano</div>
-                                <div class="flex text-yellow-500 text-sm">★★★★★</div>
+                                <div class="font-bold text-green-800">Marco
+                                    T.</div>
+                                <div class="text-sm text-green-600">Centro
+                                    Benessere • Milano</div>
+                                <div
+                                    class="flex text-yellow-500 text-sm">★★★★★</div>
                             </div>
                         </div>
                         <p class="text-green-700 italic mb-2">
@@ -221,29 +246,37 @@
                         </p>
                         <div class="bg-green-100 rounded p-3 mt-3">
                             <p class="text-xs text-green-800 font-semibold">
-                                ✅ Risultato: ROI 5x in 60 giorni (€15k fatturato da €3k investimento)
+                                ✅ Risultato: ROI 5x in 60 giorni (€15k fatturato
+                                da €3k investimento)
                             </p>
                         </div>
                     </div>
 
                     <!-- Urgenza aggiornata -->
                     <div class="bg-red-50 border border-red-200 rounded-lg p-6">
-                        <h4 class="font-bold text-red-800 mb-3">⚠️ Attenzione - Scarsità Reale:</h4>
+                        <h4 class="font-bold text-red-800 mb-3">⚠️ Attenzione -
+                            Scarsità Reale:</h4>
                         <p class="text-red-700 mb-3">
-                            Accettiamo solo <strong>5 nuove consulenze gratuite</strong> a settimana per garantire 
+                            Accettiamo solo <strong>5 nuove consulenze
+                                gratuite</strong> a settimana per garantire
                             la massima qualità e personalizzazione.
                         </p>
                         <div class="bg-red-100 rounded p-3 text-center">
-                            <div class="text-red-800 font-bold">Posti rimasti oggi:</div>
-                            <div class="text-2xl font-bold text-red-600" id="spotsCounter">5</div>
-                            <div class="text-xs text-red-600 mt-1">Si riempie velocemente ogni giorno</div>
+                            <div class="text-red-800 font-bold">Posti rimasti
+                                oggi:</div>
+                            <div class="text-2xl font-bold text-red-600"
+                                id="spotsCounter">5</div>
+                            <div class="text-xs text-red-600 mt-1">Si riempie
+                                velocemente ogni giorno</div>
                         </div>
-                        
+
                         <!-- Elemento di urgenza aggiuntivo -->
-                        <div class="mt-4 p-3 bg-yellow-100 border border-yellow-300 rounded">
+                        <div
+                            class="mt-4 p-3 bg-yellow-100 border border-yellow-300 rounded">
                             <p class="text-xs text-yellow-800 text-center">
                                 <i class="fas fa-clock mr-1"></i>
-                                <strong>Ultima prenotazione:</strong> 23 minuti fa
+                                <strong>Ultima prenotazione:</strong> 23 minuti
+                                fa
                             </p>
                         </div>
                     </div>
@@ -251,21 +284,29 @@
 
                 <!-- Colonna destra - Form ottimizzato -->
                 <div class="mb-24 lg:order-1">
-                    <div class="bg-white text-slate-800 rounded-xl shadow-2xl p-8 border-2 border-green-200 relative">
+                    <div
+                        class="bg-white text-slate-800 rounded-xl shadow-2xl p-8 border-2 border-green-200 relative">
                         <!-- Badge "GRATUITO" -->
-                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-2 rounded-full font-bold text-sm">
+                        <div
+                            class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-2 rounded-full font-bold text-sm">
                             🎁 COMPLETAMENTE GRATUITO
                         </div>
-                        
+
                         <div class="pt-4">
-                            <h2 class="text-2xl font-bold mb-2 text-center text-slate-800">Prenota la Tua Consulenza Strategica</h2>
+                            <h2
+                                class="text-2xl font-bold mb-2 text-center text-slate-800">Prenota
+                                la Tua Consulenza Strategica</h2>
                             <p class="text-center text-slate-600 mb-6 text-sm">
-                                Compila il form e ti ricontatteremo <strong>entro 2 ore</strong> per confermare la tua sessione gratuita
+                                Compila il form e ti ricontatteremo
+                                <strong>entro 2 ore</strong> per confermare la
+                                tua sessione gratuita
                             </p>
 
                             <form id="leadForm" class="space-y-4">
                                 <div>
-                                    <label for="name" class="block text-sm font-medium mb-1 text-slate-700">Nome Completo *</label>
+                                    <label for="name"
+                                        class="block text-sm font-medium mb-1 text-slate-700">Nome
+                                        Completo *</label>
                                     <input type="text" name="name" id="name"
                                         placeholder="Es: Mario Rossi"
                                         class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
@@ -273,7 +314,9 @@
                                 </div>
 
                                 <div>
-                                    <label for="email" class="block text-sm font-medium mb-1 text-slate-700">Email Aziendale *</label>
+                                    <label for="email"
+                                        class="block text-sm font-medium mb-1 text-slate-700">Email
+                                        Aziendale *</label>
                                     <input type="email" name="email" id="email"
                                         placeholder="mario@tuaazienda.it"
                                         class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
@@ -281,7 +324,9 @@
                                 </div>
 
                                 <div>
-                                    <label for="phone" class="block text-sm font-medium mb-1 text-slate-700">Telefono *</label>
+                                    <label for="phone"
+                                        class="block text-sm font-medium mb-1 text-slate-700">Telefono
+                                        *</label>
                                     <input type="tel" name="phone" id="phone"
                                         placeholder="+39 333 123 4567"
                                         class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
@@ -289,27 +334,43 @@
                                 </div>
 
                                 <div>
-                                    <label for="business" class="block text-sm font-medium mb-1 text-slate-700">Settore/Tipo di Business *</label>
+                                    <label for="business"
+                                        class="block text-sm font-medium mb-1 text-slate-700">Settore/Tipo
+                                        di Business *</label>
                                     <select name="business" id="business"
                                         class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
                                         required>
-                                        <option value="">Seleziona il tuo settore...</option>
-                                        <option value="ristorante">Ristorante/Ristorazione</option>
-                                        <option value="centro-benessere">Centro Benessere/Estetica</option>
-                                        <option value="consulente">Consulente/Professionista</option>
-                                        <option value="e-commerce">E-commerce</option>
-                                        <option value="palestra">Palestra/Fitness</option>
-                                        <option value="studio-medico">Studio Medico/Dentistico</option>
-                                        <option value="immobiliare">Agenzia Immobiliare</option>
-                                        <option value="saas">Software/SaaS</option>
-                                        <option value="servizi-locali">Servizi Locali</option>
-                                        <option value="altro">Altro (specificare in chiamata)</option>
+                                        <option value>Seleziona il tuo
+                                            settore...</option>
+                                        <option
+                                            value="ristorante">Ristorante/Ristorazione</option>
+                                        <option value="centro-benessere">Centro
+                                            Benessere/Estetica</option>
+                                        <option
+                                            value="consulente">Consulente/Professionista</option>
+                                        <option
+                                            value="e-commerce">E-commerce</option>
+                                        <option
+                                            value="palestra">Palestra/Fitness</option>
+                                        <option value="studio-medico">Studio
+                                            Medico/Dentistico</option>
+                                        <option value="immobiliare">Agenzia
+                                            Immobiliare</option>
+                                        <option
+                                            value="saas">Software/SaaS</option>
+                                        <option value="servizi-locali">Servizi
+                                            Locali</option>
+                                        <option value="altro">Altro (specificare
+                                            in chiamata)</option>
                                     </select>
                                 </div>
 
                                 <div>
-                                    <label for="challenge" class="block text-sm font-medium mb-1 text-slate-700">Principale Sfida Attuale (opzionale)</label>
-                                    <textarea name="challenge" id="challenge" rows="3"
+                                    <label for="challenge"
+                                        class="block text-sm font-medium mb-1 text-slate-700">Principale
+                                        Sfida Attuale (opzionale)</label>
+                                    <textarea name="challenge" id="challenge"
+                                        rows="3"
                                         placeholder="Es: Difficoltà ad acquisire nuovi clienti, budget marketing sprecato, concorrenza agguerrita..."
                                         class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"></textarea>
                                 </div>
@@ -317,14 +378,19 @@
                                 <div>
                                     <button type="submit"
                                         class="w-full bg-gradient-to-r from-red-500 to-yellow-500 hover:from-red-600 hover:to-yellow-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
-                                        🚀 PRENOTA LA MIA CONSULENZA STRATEGICA GRATUITA
+                                        🚀 PRENOTA LA MIA CONSULENZA STRATEGICA
+                                        GRATUITA
                                     </button>
                                 </div>
 
-                                <div class="text-center text-xs text-slate-500 space-y-1">
-                                    <p>✅ Consulenza 100% gratuita • ✅ Nessun impegno di acquisto</p>
-                                    <p>✅ Risposta garantita entro 2 ore lavorative</p>
-                                    <p class="text-green-600 font-semibold">🎁 Valore €500 - Oggi GRATIS</p>
+                                <div
+                                    class="text-center text-xs text-slate-500 space-y-1">
+                                    <p>✅ Consulenza 100% gratuita • ✅ Nessun
+                                        impegno di acquisto</p>
+                                    <p>✅ Risposta garantita entro 2 ore
+                                        lavorative</p>
+                                    <p class="text-green-600 font-semibold">🎁
+                                        Valore €500 - Oggi GRATIS</p>
                                 </div>
                             </form>
                         </div>
@@ -333,13 +399,17 @@
             </div>
 
             <!-- Messaggio di ringraziamento migliorato -->
-            <div id="thankYou" style="display: none;" class="text-center mt-8 bg-green-50 border border-green-200 rounded-lg p-8 max-w-2xl mx-auto">
+            <div id="thankYou" style="display: none;"
+                class="text-center mt-8 bg-green-50 border border-green-200 rounded-lg p-8 max-w-2xl mx-auto">
                 <div class="text-6xl mb-4">🎉</div>
-                <h3 class="text-2xl font-bold text-green-800 mb-4">Perfetto! Consulenza Prenotata</h3>
+                <h3 class="text-2xl font-bold text-green-800 mb-4">Perfetto!
+                    Consulenza Prenotata</h3>
                 <p class="text-green-700 mb-4">
-                    <strong>Ti ricontatteremo entro 2 ore</strong> per confermare la tua consulenza strategica gratuita e programmare la sessione.
+                    <strong>Ti ricontatteremo entro 2 ore</strong> per
+                    confermare la tua consulenza strategica gratuita e
+                    programmare la sessione.
                 </p>
-                
+
                 <div class="bg-green-100 rounded-lg p-4 text-green-800 mb-4">
                     <h4 class="font-bold mb-2">🎁 Quello che succede ora:</h4>
                     <div class="text-sm space-y-1">
@@ -349,35 +419,45 @@
                         <p>✅ La sessione durerà 45 minuti via Zoom</p>
                     </div>
                 </div>
-                
-                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+
+                <div
+                    class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                     <p class="text-sm text-yellow-800">
                         <i class="fas fa-info-circle mr-2"></i>
-                        <strong>Importante:</strong> Controlla la tua email (anche spam) per ricevere la conferma e il materiale preparatorio per ottimizzare al massimo la tua consulenza gratuita.
+                        <strong>Importante:</strong> Controlla la tua email
+                        (anche spam) per ricevere la conferma e il materiale
+                        preparatorio per ottimizzare al massimo la tua
+                        consulenza gratuita.
                     </p>
                 </div>
-                
+
                 <!-- Social proof dopo conversione -->
                 <div class="mt-6 text-center">
                     <p class="text-sm text-slate-600">
-                        Ti sei unito a <strong>247 imprenditori</strong> che hanno già trasformato il loro business con noi
+                        Ti sei unito a <strong>247 imprenditori</strong> che
+                        hanno già trasformato il loro business con noi
                     </p>
                     <div class="flex justify-center mt-2">
                         <div class="flex text-yellow-500 text-sm">★★★★★</div>
-                        <span class="text-xs text-slate-500 ml-2">4.9/5 su Google Reviews</span>
+                        <span class="text-xs text-slate-500 ml-2">4.9/5 su
+                            Google Reviews</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="bg-gradient-to-r bg-gray-900 text-gray-100 pt-12 pb-6 px-6 font-sans">
+        <footer
+            class="bg-gradient-to-r bg-gray-900 text-gray-100 pt-12 pb-6 px-6 font-sans">
             <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
 
                 <!-- Logo + descrizione -->
                 <div>
                     <h2
-                        class="text-2xl font-bold tracking-wide text-white">SSA AGENCY</h2>
-                    <p class="mt-3 text-gray-300">Affiancamento marketing strategico per aziende che vogliono crescere e innovare nel mercato digitale.</p>
+                        class="text-2xl font-bold tracking-wide text-white">SSA
+                        AGENCY</h2>
+                    <p class="mt-3 text-gray-300">Affiancamento marketing
+                        strategico per aziende che vogliono crescere e innovare
+                        nel mercato digitale.</p>
                     <div class="flex space-x-4 mt-4 text-gray-300">
                         <a href="#"><i
                                 class="fa-brands fa-linkedin text-lg hover:text-yellow-400 transition"></i></a>
@@ -393,13 +473,17 @@
                     <h3 class="font-semibold mb-2 text-white">Servizi</h3>
                     <ul class="space-y-1 text-gray-300">
                         <li><a href="#"
-                                class="hover:text-yellow-400 transition">Strategia Marketing</a></li>
+                                class="hover:text-yellow-400 transition">Strategia
+                                Marketing</a></li>
                         <li><a href="#"
-                                class="hover:text-yellow-400 transition">Digital Marketing</a></li>
+                                class="hover:text-yellow-400 transition">Digital
+                                Marketing</a></li>
                         <li><a href="#"
-                                class="hover:text-yellow-400 transition">Content Marketing</a></li>
+                                class="hover:text-yellow-400 transition">Content
+                                Marketing</a></li>
                         <li><a href="#"
-                                class="hover:text-yellow-400 transition">Social Media</a></li>
+                                class="hover:text-yellow-400 transition">Social
+                                Media</a></li>
                     </ul>
                 </div>
 
@@ -410,9 +494,11 @@
                         <li><a href="#"
                                 class="hover:text-yellow-400 transition">Contattaci</a></li>
                         <li><a href="#"
-                                class="hover:text-yellow-400 transition">Consulenza Gratuita</a></li>
+                                class="hover:text-yellow-400 transition">Consulenza
+                                Gratuita</a></li>
                         <li><a href="#"
-                                class="hover:text-yellow-400 transition">Il nostro Team</a></li>
+                                class="hover:text-yellow-400 transition">Il
+                                nostro Team</a></li>
                     </ul>
                 </div>
 
@@ -421,7 +507,8 @@
                     <h3 class="font-semibold mb-2 text-white">Legale</h3>
                     <ul class="space-y-1 text-gray-300">
                         <li><a href="#"
-                                class="hover:text-yellow-400 transition">Termini e
+                                class="hover:text-yellow-400 transition">Termini
+                                e
                                 Condizioni</a></li>
                         <li><a href="#"
                                 class="hover:text-yellow-400 transition">Privacy
@@ -439,17 +526,21 @@
             <!-- Footer bottom -->
             <div
                 class="text-center text-xs text-gray-400 max-w-4xl mx-auto px-4">
-                <p class="mb-2">© <span id="currentYear"></span> SSA Agency. Tutti i diritti riservati.</p>
+                <p class="mb-2">© <span id="currentYear"></span> SSA Agency.
+                    Tutti i diritti riservati.</p>
                 <script>
       document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
                 <p>
-                    <strong class="text-white">Nota:</strong> I risultati delle strategie di marketing possono variare in base al settore, alla concorrenza e all'implementazione. Le testimonianze riportate sono reali ma non garantiscono risultati identici. Ogni strategia viene personalizzata in base alle specifiche esigenze aziendali.
+                    <strong class="text-white">Nota:</strong> I risultati delle
+                    strategie di marketing possono variare in base al settore,
+                    alla concorrenza e all'implementazione. Le testimonianze
+                    riportate sono reali ma non garantiscono risultati identici.
+                    Ogni strategia viene personalizzata in base alle specifiche
+                    esigenze aziendali.
                 </p>
             </div>
         </footer>
-
-
 
         <script>
             // Form submission con tracking avanzato per consulenza
