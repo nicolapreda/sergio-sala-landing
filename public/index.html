@@ -9,6 +9,43 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
         <script src="./assets/spots-counter.js"></script>
         <title>SSA Agency</title>
+
+
+                <!-- Meta Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1271585887977769');
+        fbq('track', 'PageView');
+        
+        // Eventi specifici per funnel consulenza strategica
+        fbq('track', 'ViewContent', {
+            content_name: 'Consulenza Strategica Landing',
+            content_category: 'Consulenza Gratuita',
+            content_type: 'landing_page',
+            value: 500,
+            currency: 'EUR'
+        });
+        
+        // Track interesse per la consulenza
+        fbq('track', 'Search', {
+            search_string: 'consulenza strategica gratuita',
+            content_category: 'Lead Generation'
+        });
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+                src="https://www.facebook.com/tr?id=1271585887977769&ev=PageView&noscript=1" /></noscript>
+        <!-- End Meta Pixel Code -->
+
+
+
+
     </head>
     <body class="font-sans text-white">
 
@@ -909,16 +946,11 @@
                 }
             }
 
-            // Tracking eventi per analytics (Meta Pixel ready)
+            // Tracking eventi per Meta Pixel
             function trackEvent(eventName, parameters = {}) {
                 // Facebook Pixel tracking
                 if (typeof fbq !== 'undefined') {
                     fbq('track', eventName, parameters);
-                }
-                
-                // Google Analytics tracking
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', eventName, parameters);
                 }
                 
                 // Console log per debug

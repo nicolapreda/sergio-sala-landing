@@ -42,7 +42,7 @@
         <!-- End Meta Pixel Code -->
 
     </head>
-    
+
     <body class=" text-white font-sans ">
         <!-- BANNER URGENZA - Allineato alla homepage -->
         <div
@@ -635,67 +635,69 @@
                 submitBtn.textContent = '⏳ Invio in corso...';
                 submitBtn.disabled = true;
 
-                // Simula invio (sostituire con la tua logica di invio)
-                setTimeout(function () {
-                    // Facebook Pixel tracking per Lead
-                    if (typeof fbq !== 'undefined') {
-                        fbq('track', 'Lead', {
-                            content_name: 'Consulenza Strategica Form',
-                            content_category: 'Lead Generation',
-                            value: 500,
-                            currency: 'EUR',
-                            business_type: leadData.business
-                        });
+                // Invio al server per GoHighLevel
+                fetch('/submit-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: leadData.name,
+                        email: leadData.email,
+                        phone: leadData.phone
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Facebook Pixel tracking per Lead
+                        if (typeof fbq !== 'undefined') {
+                            fbq('track', 'Lead', {
+                                content_name: 'Consulenza Strategica Form',
+                                content_category: 'Lead Generation',
+                                value: 500,
+                                currency: 'EUR',
+                                business_type: leadData.business
+                            });
+                            
+                            // Track anche come CompleteRegistration
+                            fbq('track', 'CompleteRegistration', {
+                                content_name: 'Form Consulenza Completato',
+                                value: 500,
+                                currency: 'EUR'
+                            });
+                        }
+
+                        // Console log per debug
+                        console.log('Lead inviato a GoHighLevel:', leadData);
+
+                        // Nascondi form e mostra ringraziamento
+                        formContainer.style.display = 'none';
+                        thankYou.style.display = 'block';
                         
-                        // Track anche come CompleteRegistration
-                        fbq('track', 'CompleteRegistration', {
-                            content_name: 'Form Consulenza Completato',
-                            value: 500,
-                            currency: 'EUR'
-                        });
-                    }
+                        // Scroll al messaggio di ringraziamento
+                        thankYou.scrollIntoView({ behavior: 'smooth' });
 
-                    // Google Analytics tracking
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'generate_lead', {
-                            event_category: 'Lead Generation',
-                            event_label: 'Consulenza Strategica',
-                            value: 500,
-                            currency: 'EUR',
-                            business_type: leadData.business
-                        });
-                        
-                        // Track conversion
-                        gtag('event', 'conversion', {
-                            send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL', // Sostituire con il vero ID
-                            value: 500,
-                            currency: 'EUR'
-                        });
-                    }
+                        // Simula diminuzione posti
+                        if (spotsLeft > 1) {
+                            spotsLeft--;
+                            updateCounters();
+                        }
 
-                    // Console log per debug
-                    console.log('Lead generato:', leadData);
-
-                    // Nascondi form e mostra ringraziamento
-                    formContainer.style.display = 'none';
-                    thankYou.style.display = 'block';
-                    
-                    // Scroll al messaggio di ringraziamento
-                    thankYou.scrollIntoView({ behavior: 'smooth' });
-
-                    // Simula diminuzione posti
-                    if (spotsLeft > 1) {
-                        spotsLeft--;
-                        updateCounters();
-                    }
-
-                    // Reset form per test (rimuovere in produzione)
-                    setTimeout(() => {
+                        // Reset bottone
                         submitBtn.textContent = originalText;
                         submitBtn.disabled = false;
-                    }, 3000);
-
-                }, 1500);
+                    } else {
+                        throw new Error('Errore invio form');
+                    }
+                })
+                .catch(error => {
+                    console.error('Errore:', error);
+                    alert('Si è verificato un errore. Riprova o contattaci direttamente.');
+                    
+                    // Reset bottone
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
             });
 
             // Tracking scroll depth
