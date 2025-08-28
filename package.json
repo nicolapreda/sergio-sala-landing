@@ -6,13 +6,15 @@
   "author": "",
   "type": "commonjs",
   "main": "server.js",
-"scripts": {
-  "dev": "tailwindcss -i ./src/input.css -o ./public/assets/style.css --watch",
-  "build": "tailwindcss -i ./src/input.css -o ./public/assets/style.css --minify",
-  "start": "node server.js"
-},
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./public/assets/style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./public/assets/style.css --minify",
+    "start": "node server.js"
+  },
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

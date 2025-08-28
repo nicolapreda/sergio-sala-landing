@@ -3,26 +3,56 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="./assets/style.css" rel="stylesheet" />
-        <link rel="icon" href="./assets/logo.png" type="image/x-icon" />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-        <script src="./assets/spots-counter.js"></script>
-
-        <!-- SEO Ottimizzato per form consulenza -->
-        <title>Prenota Consulenza Strategica Gratuita (€500) - SSA Agency</title>
-        <meta name="description"
-            content="Compila il form e prenota la tua consulenza strategica gratuita del valore di €500. Analisi personalizzata + piano d'azione concreto per far crescere il tuo business." />
-        <meta name="keywords"
-            content="prenota consulenza gratuita, form consulenza strategica, marketing business, crescita aziendale" />
-
-        <!-- Open Graph per social media -->
-        <meta property="og:title"
-            content="Prenota la Tua Consulenza Strategica Gratuita (€500)" />
-        <meta property="og:description"
-            content="Form di prenotazione per consulenza strategica gratuita. Analisi personalizzata + piano d'azione concreto." />
-        <meta property="og:image" content="./assets/logo.png" />
+        
+        <!-- SEO OTTIMIZZATO PAGINA FORM -->
+        <title>Verifica Parametri Business - Form Analisi Gratuita | SSA Agency</title>
+        <meta name="description" content="📝 Compila il form per la verifica gratuita dei parametri del tuo business. Scopri se puoi accedere alla soluzione che ha trasformato 247+ aziende. Verifica ora!" />
+        <meta name="keywords" content="form verifica parametri, analisi business gratuita, verifica idoneità, soluzione business, SSA Agency form" />
+        
+        <!-- META ROBOT E CANONICAL -->
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://ssaagency.it/prenota.html" />
+        
+        <!-- OPEN GRAPH OTTIMIZZATO -->
+        <meta property="og:locale" content="it_IT" />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content="Verifica Parametri Business - SSA Agency" />
+        <meta property="og:description" content="📝 Compila il form per la verifica gratuita dei parametri del tuo business. Scopri se puoi accedere alla soluzione specifica." />
+        <meta property="og:url" content="https://ssaagency.it/prenota.html" />
+        <meta property="og:site_name" content="SSA Agency" />
+        <meta property="og:image" content="https://ssaagency.it/assets/favicon.png" />
+        
+        <!-- TWITTER CARD -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Verifica Parametri Business - SSA Agency" />
+        <meta name="twitter:description" content="📝 Form verifica parametri business gratuita. Scopri se puoi accedere alla soluzione specifica." />
+        
+        <!-- SCHEMA.ORG PER FORM -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Verifica Parametri Business",
+            "description": "Pagina di verifica parametri per accesso a soluzione business SSA Agency",
+            "url": "https://ssaagency.it/prenota.html",
+            "mainEntity": {
+                "@type": "Service",
+                "name": "Verifica Parametri Business",
+                "description": "Verifica gratuita parametri aziendali per accesso a soluzioni specifiche",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "SSA Agency"
+                }
+            }
+        }
+        </script>
+        
+        <!-- CSS E FONT -->
+        <link href="./assets/style.css" rel="stylesheet" />
+        <link rel="icon" href="./assets/favicon.png" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="./assets/logo.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <script src="./assets/spots-counter.js"></script>
 
         <!-- Meta Pixel Code -->
         <script>
@@ -45,7 +75,7 @@
 
     <body class=" text-white font-sans ">
         <!-- BANNER URGENZA - Allineato alla homepage -->
-        <div
+        <div id="urgencyBanner"
             class="bg-gradient-to-r from-red-600 via-red-700 to-red-600 py-3 px-4 relative overflow-hidden border-t-4 border-b-4 border-yellow-400"
             data-urgency>
             <div
@@ -59,26 +89,26 @@
                         ULTIMI POSTI DISPONIBILI</span>
                 </div>
                 <p class="text-white text-sm md:text-base font-bold">
-                    🎯 <span class="text-yellow-300">CONSULENZA STRATEGICA
+                    🎯 <span class="text-yellow-300">VERIFICA PARAMETRI BUSINESS
                         GRATUITA</span>
                     <span class="text-red-200">(valore €500)</span> -
-                    <span class="text-yellow-300" id="spotsLeftForm">5</span>
-                    <span data-spots-text="{spots} posti rimasti oggi!">posti
-                        rimasti oggi!</span>
+                    <span class="text-yellow-300" id="spotsLeftForm" data-spots-text="{spots}">1</span>
+                    <span data-spots-text="{spots} verifiche rimaste oggi!">verifiche
+                        rimaste oggi!</span>
                 </p>
                 <p class="text-yellow-100 text-xs mt-1">
-                    ⏰ Compila il form ora per garantirti il tuo posto
+                    ⏰ Compila il form ora per verificare se puoi accedere alla soluzione
                 </p>
             </div>
         </div>
 
         <!-- NAVBAR -->
-        <nav class="bg-white shadow-lg border-b border-gray-100">
+        <nav id="mainNavbar" class="bg-white shadow-lg border-b border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo e nome -->
                     <div class="flex items-center space-x-3">
-                        <img src="./assets/logo.png" alt="SSA Agency"
+                        <img src="./assets/logo.png" alt="SSA Agency Logo - Consulenza Marketing Strategico"
                             class="h-10 w-auto" />
                         <div>
                             <h1 class="text-lg font-bold text-slate-800">SSA
@@ -102,7 +132,7 @@
         </nav>
 
         <!-- HERO OTTIMIZZATA -->
-        <section
+        <section id="mainContent"
             class="bg-gradient-to-br from-slate-50 to-indigo-50 min-h-screen flex flex-col items-center justify-center px-4 text-slate-800">
 
             <!-- Social proof immediato -->
@@ -139,10 +169,10 @@
             <div class="text-center mb-8 max-w-4xl">
                 <h1
                     class="text-3xl md:text-5xl font-bold mb-4 text-slate-800 leading-tight">
-                    🎯 <span class="text-green-600">COMPILA IL FORM</span> e
-                    Prenota<br />
-                    la Tua Consulenza Strategica <span
-                        class="text-red-600">GRATUITA</span>
+                    🎯 <span class="text-green-600">COMPILA IL FORM</span> per
+                    Verificare<br />
+                    se puoi Accedere alla <span
+                        class="text-red-600">Soluzione</span>
                 </h1>
 
                 <p class="text-lg md:text-xl text-slate-700 mb-6 font-medium">
@@ -150,54 +180,45 @@
                         valore</span> →
                     <span class="text-green-600 font-bold">GRATIS
                         oggi</span><br />
-                    <strong>In 45 minuti analizziamo la tua azienda</strong> e
-                    ti mostriamo come generare clienti ogni mese
+                    <strong>Verifichiamo se i tuoi parametri</strong> sono allineati con quelli delle aziende che hanno già trasformato il loro business
                 </p>
 
                 <!-- Benefici chiari della consulenza -->
                 <div
                     class="bg-white rounded-xl p-6 shadow-lg border border-red-200 mb-8">
-                    <h3 class="text-xl font-bold mb-4 text-slate-800">🎁 Quello
-                        che riceverai nella CONSULENZA GRATUITA:</h3>
+                                        <h3 class="text-xl font-bold mb-4 text-slate-800">🎁 Quello
+                        che riceverai nella VERIFICA GRATUITA:</h3>
                     <div class="grid md:grid-cols-2 gap-4 text-left">
                         <div class="flex items-start">
                             <i
                                 class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
                             <div>
-                                <strong>🔍 Analisi personalizzata</strong><br />
-                                <span class="text-sm text-slate-600">della tua
-                                    presenza online e opportunità
-                                    nascoste</span>
+                                <strong>Analisi parametri settoriali</strong><br>
+                                <span class="text-sm text-slate-600">Confronto con standard di mercato</span>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i
                                 class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
                             <div>
-                                <strong>🚀 Strategia su misura</strong><br />
-                                <span class="text-sm text-slate-600">per
-                                    acquisire nuovi clienti nei prossimi 90
-                                    giorni</span>
+                                <strong>Verifica idoneità</strong><br>
+                                <span class="text-sm text-slate-600">Controllo requisiti per accesso</span>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i
                                 class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
                             <div>
-                                <strong>📊 Esempi pratici</strong><br />
-                                <span class="text-sm text-slate-600">di campagne
-                                    che stanno già funzionando nel tuo
-                                    settore</span>
+                                <strong>Presentazione soluzione</strong><br>
+                                <span class="text-sm text-slate-600">Se idoneo, soluzione specifica</span>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i
                                 class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
                             <div>
-                                <strong>🎯 Piano d'azione
-                                    immediato</strong><br />
-                                <span class="text-sm text-slate-600">con i primi
-                                    3 step da implementare subito</span>
+                                <strong>Piano personalizzato</strong><br>
+                                <span class="text-sm text-slate-600">Strategia mirata per il tuo settore</span>
                             </div>
                         </div>
                     </div>
@@ -209,9 +230,8 @@
                             <h4 class="font-bold text-yellow-800 mb-2">🎁 BONUS
                                 ESCLUSIVO</h4>
                             <p class="text-sm text-yellow-700">
-                                <strong>Mini-formazione gratuita</strong> +
-                                template e checklist operative da utilizzare
-                                immediatamente
+                                <strong>Risorse premium gratuite</strong> per chi risulta idoneo alla soluzione +
+                                materiali per l'implementazione immediata
                             </p>
                         </div>
                     </div>
@@ -242,7 +262,7 @@
                             </div>
                         </div>
                         <p class="text-green-700 italic mb-2">
-                            "Pensavo fosse la solita chiamata commerciale. Invece ho ricevuto più valore in 45 minuti che in anni di tentativi da solo."
+                            "Non credevo che una semplice verifica potesse essere così rivelante. Ho scoperto che avevo tutti i requisiti e ora sto già vedendo i primi risultati."
                         </p>
                         <div class="bg-green-100 rounded p-3 mt-3">
                             <p class="text-xs text-green-800 font-semibold">
@@ -257,17 +277,18 @@
                         <h4 class="font-bold text-red-800 mb-3">⚠️ Attenzione -
                             Scarsità Reale:</h4>
                         <p class="text-red-700 mb-3">
-                            Accettiamo solo <strong>5 nuove consulenze
-                                gratuite</strong> a settimana per garantire
-                            la massima qualità e personalizzazione.
+                            Accettiamo solo <strong data-spots-text="{spots} nuove verifiche
+                                gratuite">1 nuove verifiche
+                                gratuite</strong> per garantire
+                            la massima qualità nell'analisi dei parametri settoriali.
                         </p>
                         <div class="bg-red-100 rounded p-3 text-center">
-                            <div class="text-red-800 font-bold">Posti rimasti
-                                oggi:</div>
+                            <div class="text-red-800 font-bold">Verifiche rimaste
+                                :</div>
                             <div class="text-2xl font-bold text-red-600"
-                                id="spotsCounter">5</div>
+                                id="spotsCounter" data-spots-text="{spots}">1</div>
                             <div class="text-xs text-red-600 mt-1">Si riempie
-                                velocemente ogni giorno</div>
+                                velocemente</div>
                         </div>
 
                         <!-- Elemento di urgenza aggiuntivo -->
@@ -289,17 +310,17 @@
                         <!-- Badge "GRATUITO" -->
                         <div
                             class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-2 rounded-full font-bold text-sm">
-                            🎁 COMPLETAMENTE GRATUITO
+                            🎁 VERIFICA GRATUITA
                         </div>
 
                         <div class="pt-4">
                             <h2
-                                class="text-2xl font-bold mb-2 text-center text-slate-800">Prenota
-                                la Tua Consulenza Strategica</h2>
+                                class="text-2xl font-bold mb-2 text-center text-slate-800">Richiedi
+                                la Tua Verifica Parametri</h2>
                             <p class="text-center text-slate-600 mb-6 text-sm">
                                 Compila il form e ti ricontatteremo
-                                <strong>entro 2 ore</strong> per confermare la
-                                tua sessione gratuita
+                                <strong>entro 2 ore</strong> per programmare la
+                                verifica gratuita
                             </p>
 
                             <form id="leadForm" class="space-y-4">
@@ -400,36 +421,16 @@
 
             <!-- Messaggio di ringraziamento migliorato -->
             <div id="thankYou" style="display: none;"
-                class="text-center mt-8 bg-green-50 border border-green-200 rounded-lg p-8 max-w-2xl mx-auto">
-                <div class="text-6xl mb-4">🎉</div>
-                <h3 class="text-2xl font-bold text-green-800 mb-4">Perfetto!
-                    Consulenza Prenotata</h3>
-                <p class="text-green-700 mb-4">
-                    <strong>Ti ricontatteremo entro 2 ore</strong> per
-                    confermare la tua consulenza strategica gratuita e
-                    programmare la sessione.
+                class="text-center bg-green-50 border border-green-200 rounded-lg p-12 max-w-3xl mx-auto shadow-lg">
+                <div class="text-8xl mb-6">🎉</div>
+                <h3 class="text-4xl font-bold text-green-800 mb-6">Perfetto!
+                    Verifica Richiesta</h3>
+                <p class="text-xl text-green-700 mb-6">
+                    <strong>Ti ricontatteremo</strong> per
+                    programmare la tua verifica parametri gratuita e
+                    stabilire data e ora della sessione.
                 </p>
 
-                <div class="bg-green-100 rounded-lg p-4 text-green-800 mb-4">
-                    <h4 class="font-bold mb-2">🎁 Quello che succede ora:</h4>
-                    <div class="text-sm space-y-1">
-                        <p>✅ Riceverai una chiamata di conferma entro 2 ore</p>
-                        <p>✅ Fisseremo insieme data e ora della consulenza</p>
-                        <p>✅ Ti invieremo materiale preparatorio esclusivo</p>
-                        <p>✅ La sessione durerà 45 minuti via Zoom</p>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                    <p class="text-sm text-yellow-800">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        <strong>Importante:</strong> Controlla la tua email
-                        (anche spam) per ricevere la conferma e il materiale
-                        preparatorio per ottimizzare al massimo la tua
-                        consulenza gratuita.
-                    </p>
-                </div>
 
                 <!-- Social proof dopo conversione -->
                 <div class="mt-6 text-center">
@@ -446,98 +447,24 @@
             </div>
         </section>
 
-        <footer
-            class="bg-gradient-to-r bg-gray-900 text-gray-100 pt-12 pb-6 px-6 font-sans">
-            <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
-
-                <!-- Logo + descrizione -->
-                <div>
-                    <h2
-                        class="text-2xl font-bold tracking-wide text-white">SSA
-                        AGENCY</h2>
-                    <p class="mt-3 text-gray-300">Affiancamento marketing
-                        strategico per aziende che vogliono crescere e innovare
-                        nel mercato digitale.</p>
-                    <div class="flex space-x-4 mt-4 text-gray-300">
-                        <a href="#"><i
-                                class="fa-brands fa-linkedin text-lg hover:text-yellow-400 transition"></i></a>
-                        <a href="#"><i
-                                class="fa-brands fa-instagram text-lg hover:text-yellow-400 transition"></i></a>
-                        <a href="#"><i
-                                class="fa-brands fa-twitter text-lg hover:text-yellow-400 transition"></i></a>
-                    </div>
-                </div>
-
-                <!-- Colonna Servizi -->
-                <div>
-                    <h3 class="font-semibold mb-2 text-white">Servizi</h3>
-                    <ul class="space-y-1 text-gray-300">
-                        <li><a href="#"
-                                class="hover:text-yellow-400 transition">Strategia
-                                Marketing</a></li>
-                        <li><a href="#"
-                                class="hover:text-yellow-400 transition">Digital
-                                Marketing</a></li>
-                        <li><a href="#"
-                                class="hover:text-yellow-400 transition">Content
-                                Marketing</a></li>
-                        <li><a href="#"
-                                class="hover:text-yellow-400 transition">Social
-                                Media</a></li>
-                    </ul>
-                </div>
-
-                <!-- Colonna Supporto -->
-                <div>
-                    <h3 class="font-semibold mb-2 text-white">Supporto</h3>
-                    <ul class="space-y-1 text-gray-300">
-                        <li><a href="#"
-                                class="hover:text-yellow-400 transition">Contattaci</a></li>
-                        <li><a href="#"
-                                class="hover:text-yellow-400 transition">Consulenza
-                                Gratuita</a></li>
-                        <li><a href="#"
-                                class="hover:text-yellow-400 transition">Il
-                                nostro Team</a></li>
-                    </ul>
-                </div>
-
-                <!-- Colonna Legale -->
-                <div>
-                    <h3 class="font-semibold mb-2 text-white">Legale</h3>
-                    <ul class="space-y-1 text-gray-300">
-                        <li><a href="#"
-                                class="hover:text-yellow-400 transition">Termini
-                                e
-                                Condizioni</a></li>
-                        <li><a href="#"
-                                class="hover:text-yellow-400 transition">Privacy
-                                Policy</a></li>
-                        <li><a href="#"
-                                class="hover:text-yellow-400 transition">Cookie
-                                Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Divider -->
-            <div class="border-t border-slate-700 my-6"></div>
+        <footer id="mainFooter" class="bg-gradient-to-r bg-gray-900 text-gray-100 pt-12 pb-6 px-6 font-sans">
 
             <!-- Footer bottom -->
             <div
                 class="text-center text-xs text-gray-400 max-w-4xl mx-auto px-4">
-                <p class="mb-2">© <span id="currentYear"></span> SSA Agency.
-                    Tutti i diritti riservati.</p>
+                <p class="mb-2">© <span id="currentYear"></span> SSA Agency. Tutti i diritti riservati.</p>
                 <script>
       document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
+                
+                <!-- Link legali -->
+                <div class="mb-4">
+                    <a href="./privacy-policy.html" class="text-gray-400 hover:text-white mx-2 underline">Privacy Policy</a>
+                    <a href="./cookie-policy.html" class="text-gray-400 hover:text-white mx-2 underline">Cookie Policy</a>
+                </div>
+                
                 <p>
-                    <strong class="text-white">Nota:</strong> I risultati delle
-                    strategie di marketing possono variare in base al settore,
-                    alla concorrenza e all'implementazione. Le testimonianze
-                    riportate sono reali ma non garantiscono risultati identici.
-                    Ogni strategia viene personalizzata in base alle specifiche
-                    esigenze aziendali.
+                    <strong class="text-white">Nota:</strong> I risultati delle strategie di marketing possono variare in base al settore, alla concorrenza e all'implementazione. Le testimonianze riportate sono reali ma non garantiscono risultati identici. Ogni strategia viene personalizzata in base alle specifiche esigenze aziendali.
                 </p>
             </div>
         </footer>
@@ -546,48 +473,11 @@
             // Form submission con tracking avanzato per consulenza
             const form = document.getElementById('leadForm');
             const thankYou = document.getElementById('thankYou');
+            const mainContent = document.getElementById('mainContent');
+            const urgencyBanner = document.getElementById('urgencyBanner');
+            const mainNavbar = document.getElementById('mainNavbar');
+            const mainFooter = document.getElementById('mainFooter');
             const formContainer = form.parentElement.parentElement;
-
-            // Contatori dinamici allineati alla homepage (5 posti)
-            let spotsLeft = 5;
-            const spotsElements = [
-                document.getElementById('spotsLeftForm'),
-                document.getElementById('spotsCounter')
-            ];
-
-            // Aggiorna contatori
-            function updateCounters() {
-                spotsElements.forEach(el => {
-                    if (el) {
-                        el.textContent = spotsLeft;
-                        if (spotsLeft <= 2) {
-                            el.style.color = '#ef4444';
-                            el.classList.add('animate-pulse');
-                        } else if (spotsLeft <= 3) {
-                            el.style.color = '#f59e0b';
-                        } else {
-                            el.style.color = '#10b981';
-                        }
-                    }
-                });
-            }
-
-            // Simula diminuzione posti durante la giornata (come homepage)
-            function updateSpotsBasedOnTime() {
-                const now = new Date();
-                const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 9, 0, 0);
-                const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0);
-                
-                if (now >= startOfDay && now <= endOfDay) {
-                    const totalMinutes = (endOfDay - startOfDay) / (1000 * 60);
-                    const elapsedMinutes = (now - startOfDay) / (1000 * 60);
-                    const progressRatio = elapsedMinutes / totalMinutes;
-                    
-                    // Diminuisce i posti nel corso della giornata
-                    spotsLeft = Math.max(1, Math.floor(5 * (1 - progressRatio * 0.8)));
-                    updateCounters();
-                }
-            }
 
             // Validazione in tempo reale migliorata
             const inputs = form.querySelectorAll('input[required], select[required]');
@@ -648,55 +538,124 @@
                     })
                 })
                 .then(response => {
-                    if (response.ok) {
-                        // Facebook Pixel tracking per Lead
-                        if (typeof fbq !== 'undefined') {
-                            fbq('track', 'Lead', {
-                                content_name: 'Consulenza Strategica Form',
-                                content_category: 'Lead Generation',
-                                value: 500,
-                                currency: 'EUR',
-                                business_type: leadData.business
-                            });
-                            
-                            // Track anche come CompleteRegistration
-                            fbq('track', 'CompleteRegistration', {
-                                content_name: 'Form Consulenza Completato',
-                                value: 500,
-                                currency: 'EUR'
-                            });
-                        }
-
-                        // Console log per debug
-                        console.log('Lead inviato a GoHighLevel:', leadData);
-
-                        // Nascondi form e mostra ringraziamento
-                        formContainer.style.display = 'none';
-                        thankYou.style.display = 'block';
+                    console.log('Response status:', response.status);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Success response:', data);
+                    
+                    // Facebook Pixel tracking per Lead
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead', {
+                            content_name: 'Verifica Parametri Form',
+                            content_category: 'Verifica Business',
+                            value: 500,
+                            currency: 'EUR',
+                            business_type: leadData.business
+                        });
                         
-                        // Scroll al messaggio di ringraziamento
-                        thankYou.scrollIntoView({ behavior: 'smooth' });
+                        // Track anche come CompleteRegistration
+                        fbq('track', 'CompleteRegistration', {
+                            content_name: 'Form Verifica Completato',
+                            value: 500,
+                            currency: 'EUR'
+                        });
+                    }
 
-                        // Simula diminuzione posti
-                        if (spotsLeft > 1) {
-                            spotsLeft--;
+                    // Console log per debug
+                    console.log('Richiesta verifica parametri inviata a GoHighLevel:', leadData);
+                    console.log('Elemento thankYou trovato:', thankYou);
+                    console.log('Mostrando messaggio di ringraziamento...');
+
+                    // Approccio più semplice: sostituisci il contenuto del body
+                    const thankYouHTML = `
+                        <div style="
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            min-height: 100vh;
+                            background-color: #f8fafc;
+                            font-family: system-ui, -apple-system, sans-serif;
+                            margin: 0;
+                            padding: 20px;
+                            box-sizing: border-box;
+                        ">
+                            <div style="
+                                text-align: center;
+                                background-color: #f0f9ff;
+                                border: 2px solid #10b981;
+                                border-radius: 16px;
+                                padding: 48px;
+                                max-width: 600px;
+                                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+                            ">
+                                <div style="font-size: 80px; margin-bottom: 24px;">🎉</div>
+                                <h3 style="
+                                    font-size: 36px;
+                                    font-weight: bold;
+                                    color: #065f46;
+                                    margin-bottom: 24px;
+                                    margin-top: 0;
+                                ">Perfetto! Verifica Richiesta</h3>
+                                <p style="
+                                    font-size: 20px;
+                                    color: #047857;
+                                    margin-bottom: 24px;
+                                    line-height: 1.6;
+                                ">
+                                    <strong>Ti ricontatteremo</strong> per programmare la tua verifica parametri gratuita e stabilire data e ora della sessione.
+                                </p>
+                                <div style="
+                                    margin-top: 32px;
+                                    padding: 16px;
+                                    background-color: #ecfdf5;
+                                    border-radius: 8px;
+                                ">
+                                    <p style="
+                                        font-size: 16px;
+                                        color: #374151;
+                                        margin: 0;
+                                    ">
+                                        Ti sei unito a <strong>247 imprenditori</strong> che hanno già trasformato il loro business con noi ⭐⭐⭐⭐⭐
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Sostituisci tutto il contenuto del body
+                    document.body.innerHTML = thankYouHTML;
+                    document.body.style.margin = '0';
+                    document.body.style.padding = '0';
+
+                    // Simula diminuzione posti
+                    if (typeof spotsLeft !== 'undefined' && spotsLeft > 1) {
+                        spotsLeft--;
+                        if (typeof updateCounters === 'function') {
                             updateCounters();
                         }
-
-                        // Reset bottone
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                    } else {
-                        throw new Error('Errore invio form');
                     }
-                })
-                .catch(error => {
-                    console.error('Errore:', error);
-                    alert('Si è verificato un errore. Riprova o contattaci direttamente.');
-                    
-                    // Reset bottone
+
+                    // Reset bottone (non necessario perché form è nascosto)
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
+                })
+                .catch(error => {
+                    console.error('Errore invio form:', error);
+                    
+                    // Mostra messaggio di errore più user-friendly
+                    alert('❌ Si è verificato un errore durante l\'invio.\n\nPer favore riprova tra un momento o contattaci direttamente al numero che trovi in questa pagina.');
+                    
+                    // Reset bottone per permettere un nuovo tentativo
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // NON nascondere il form in caso di errore
+                    // Il form rimane visibile per permettere un nuovo tentativo
                 });
             });
 
@@ -733,11 +692,6 @@
 
             // Inizializzazione
             document.addEventListener('DOMContentLoaded', function() {
-                updateSpotsBasedOnTime();
-                
-                // Aggiorna ogni 15 minuti
-                setInterval(updateSpotsBasedOnTime, 15 * 60 * 1000);
-                
                 // Track arrivo su pagina form
                 if (typeof fbq !== 'undefined') {
                     fbq('trackCustom', 'FormPageView', {
