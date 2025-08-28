@@ -129,11 +129,18 @@ function updateAllSpotsDisplay() {
             if (element.parentElement) {
                 element.parentElement.classList.add('animate-pulse');
             }
-            element.style.color = '#ef4444'; // Rosso per urgenza massima (1-3 spots)
+            // Usa bianco con shadow per alta visibilità su sfondo rosso
+            element.style.color = '#ffffff';
+            element.style.textShadow = '1px 1px 2px rgba(0,0,0,0.8)';
+            element.style.fontWeight = 'bold';
         } else if (currentSpots <= 7) {
             element.style.color = '#f59e0b'; // Arancione per urgenza media (4-7 spots)
+            element.style.textShadow = '1px 1px 2px rgba(0,0,0,0.5)';
+            element.style.fontWeight = 'bold';
         } else {
             element.style.color = '#10b981'; // Verde per disponibilità normale (8+ spots)
+            element.style.textShadow = 'none';
+            element.style.fontWeight = 'normal';
         }
     });
     
@@ -150,11 +157,18 @@ function updateAllSpotsDisplay() {
             if (element.parentElement) {
                 element.parentElement.classList.add('animate-pulse');
             }
-            element.style.color = '#ef4444'; // Rosso per urgenza massima (1-3 spots)
+            // Usa bianco con shadow per alta visibilità su sfondo rosso
+            element.style.color = '#ffffff';
+            element.style.textShadow = '1px 1px 2px rgba(0,0,0,0.8)';
+            element.style.fontWeight = 'bold';
         } else if (currentSpots <= 7) {
             element.style.color = '#f59e0b'; // Arancione per urgenza media (4-7 spots)
+            element.style.textShadow = '1px 1px 2px rgba(0,0,0,0.5)';
+            element.style.fontWeight = 'bold';
         } else {
             element.style.color = '#10b981'; // Verde per disponibilità normale (8+ spots)
+            element.style.textShadow = 'none';
+            element.style.fontWeight = 'normal';
         }
     });
     

@@ -84,8 +84,8 @@
         
         <!-- CSS E FONT OTTIMIZZATI -->
         <link href="./assets/style.css" rel="stylesheet" />
-        <link rel="icon" href="./assets/logo.png" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="./assets/logo.png" />
+        <link rel="icon" href="./assets/favicon.png" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="./assets/favicon.png" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
         
         <!-- PRELOAD CRITICAL RESOURCES -->
@@ -156,8 +156,10 @@
                         <!-- Counter più aggressivo -->
                         <div class="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/30" data-urgency>
                             <div class="flex items-center">
-                                <span class="text-white text-xs mr-1">Posti:</span>
-                                <span class="text-yellow-300 font-bold text-lg animate-pulse" data-spots-text="{spots}">3</span>
+                                <span class="text-white text-xs mr-1 font-bold">Posti:</span>
+                                <span class="text-white font-bold text-lg animate-pulse bg-red-800/50 px-2 py-1 rounded" 
+                                      style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);" 
+                                      data-spots-text="{spots}">3</span>
                                 <span class="text-red-200 text-xs ml-1">/20</span>
                             </div>
                         </div>
