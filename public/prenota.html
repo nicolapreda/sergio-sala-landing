@@ -533,18 +533,13 @@
                     // Facebook Pixel tracking per Lead
                     if (typeof fbq !== 'undefined') {
                         fbq('track', 'Lead', {
-                            content_name: 'Verifica Parametri Form',
-                            content_category: 'Verifica Business',
-                            value: 500,
-                            currency: 'EUR',
-                            business_type: leadData.business
+                            content_name: 'Form Contatto',
+                            content_category: 'Lead Generation'
                         });
                         
                         // Track anche come CompleteRegistration
                         fbq('track', 'CompleteRegistration', {
-                            content_name: 'Form Verifica Completato',
-                            value: 500,
-                            currency: 'EUR'
+                            content_name: 'Form Completato'
                         });
                     }
 

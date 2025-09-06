@@ -6,7 +6,7 @@ function trackLeadGeneration(leadData) {
     // Meta Pixel tracking
     if (typeof fbq !== 'undefined') {
         fbq('track', 'Lead', {
-            content_name: 'Consulenza Strategica',
+            content_name: 'Form Contatto',
             content_category: 'Lead Generation', 
             custom_data: leadData
         });
