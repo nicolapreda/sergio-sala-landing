@@ -52,7 +52,7 @@ function saveLeadLocally(leadData) {
 
 app.post('/submit-form', async (req, res) => {
   console.log('📥 Richiesta ricevuta:', req.body);
-  const { name, email, phone } = req.body;
+  const { name, email, phone, business, challenge } = req.body;
 
   // Validazione base
   if (!name || !email || !phone) {
@@ -76,7 +76,17 @@ app.post('/submit-form', async (req, res) => {
       name: name,
       tags: ["Landing SSA"],  // Tag automatico per identificare lead dalla landing
       source: "Landing Page SSA",
-      dateAdded: new Date().toISOString()  // Aggiungiamo timestamp esplicito
+      dateAdded: new Date().toISOString(),  // Aggiungiamo timestamp esplicito
+      customFields: [
+        {
+          key: "business_type",
+          field_value: business || "Non specificato"
+        },
+        {
+          key: "challenge",
+          field_value: challenge || "Non specificato"
+        }
+      ]
     };
     console.log('📤 Payload con timestamp:', payload);
     console.log('🕐 Timestamp attuale:', new Date().toISOString());
@@ -123,7 +133,14 @@ app.post('/submit-form', async (req, res) => {
     
     // FALLBACK anche per errori di rete
     console.log('⚠️ FALLBACK per errore di rete: Salvando lead localmente');
-    const leadData = { name, email, phone, firstName: name.split(' ')[0] || name };
+    const leadData = { 
+      name, 
+      email, 
+      phone, 
+      business: business || "Non specificato",
+      challenge: challenge || "Non specificato",
+      firstName: name.split(' ')[0] || name 
+    };
     const leadSaved = saveLeadLocally(leadData);
     
     if (leadSaved) {
@@ -154,7 +171,17 @@ app.get('/test-ghl', async (req, res) => {
       name: "Test Connection",
       tags: ["Landing SSA", "Test"],
       source: "API Test",
-      dateAdded: new Date().toISOString()
+      dateAdded: new Date().toISOString(),
+      customFields: [
+        {
+          key: "business_type",
+          field_value: "Test Business"
+        },
+        {
+          key: "challenge",
+          field_value: "Test Challenge"
+        }
+      ]
     };
     
     console.log('📤 Test payload:', testPayload);
