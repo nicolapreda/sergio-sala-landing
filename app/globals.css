@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #8B0000;
+  --color-brand-gold: #FFD700;
+  --color-brand-dark: #2a0505; /* Visible Dark Red */
+  --color-brand-gray: #1E1E1E;
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #2a0505;
+  --foreground: #ededed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: var(--color-brand-dark);
+  background-image: 
+    linear-gradient(to right, rgba(255, 50, 50, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 50, 50, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, #500a0a 0%, var(--color-brand-dark) 80%);
+  background-size: 50px 50px, 50px 50px, 100% 100%;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+@utility text-glow {
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+@utility glass-card {
+  background-color: color-mix(in srgb, var(--color-brand-gray), transparent 50%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
