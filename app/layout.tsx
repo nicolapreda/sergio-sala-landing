@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SSA Agency - Pionieri del Marketing",
-  description: "Non ti serve un'agenzia, ti servono risultati. Strategie di marketing che funzionano.",
+  title: "SSA Agency - Riempi il tuo locale",
+  description: "Riempi il tuo locale senza fare balletti su Tiktok.",
 };
 
 export default function RootLayout({

@@ -29,8 +29,8 @@ export async function POST(request: Request) {
             firstName: name.split(' ')[0] || name,
             lastName: name.split(' ').slice(1).join(' ') || '',
             name: name,
-            tags: ["Landing SSA", "NextJS Migration"],
-            source: "Landing Page SSA (NextJS)",
+            tags: ["Landing SSA"],
+            source: "Landing Page SSA",
             dateAdded: new Date().toISOString(),
             customFields: [
                 {
