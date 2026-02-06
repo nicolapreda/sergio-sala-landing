@@ -117,16 +117,16 @@ export default function Home() {
               </h2>
               <div className="space-y-6">
                 <div className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
-                  <div className="text-3xl">😴</div>
+                  <div className="text-3xl">🤡</div>
                   <div>
-                    <h3 className="text-xl font-bold mb-1 text-white">Musichetta Motivazionale?</h3>
-                    <p className="text-gray-400">Tutti la usano. Tutti la ignorano. Se sei uguale agli altri, sei invisibile.</p>
+                    <h3 className="text-xl font-bold mb-1 text-white">Sottotitoli colorati e Hook virali?</h3>
+                    <p className="text-gray-400">Mettono solo in ridicolo la tua attività invece di trasmettere professionalità e valore.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
                   <div className="text-3xl">🤖</div>
                   <div>
-                    <h3 className="text-xl font-bold mb-1 text-white">Copia-Incolla dai Competitor?</h3>
+                    <h3 className="text-xl font-bold mb-1 text-white">Trend Copia-Incolla dai Competitor?</h3>
                     <p className="text-gray-400">Non puoi vincere copiando chi sta già perdendo. Ti serve un angolo unico.</p>
                   </div>
                 </div>
@@ -167,21 +167,45 @@ export default function Home() {
                  <div className="absolute inset-0 bg-brand-red/20 blur-[80px] rounded-full -z-10" />
                  <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-4 pt-8">
-                       <div className="h-64 rounded-2xl bg-gray-800 border-2 border-brand-gold/20 overflow-hidden relative group hover:border-brand-gold/50 transition-colors">
+                       <div className="h-64 rounded-2xl border-2 border-brand-gold/20 overflow-hidden relative group hover:border-brand-gold/50 transition-colors">
+                          <Image 
+                            src="/ssaagency-clienti-1.jpg" 
+                            alt="Precisione" 
+                            fill 
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-                          <span className="absolute bottom-4 left-4 text-white z-20 font-bold">Visual Impact 📸</span>
+                          <span className="absolute bottom-4 left-4 text-white z-20 font-bold">Precisione 📐</span>
                        </div>
-                       <div className="h-40 rounded-2xl bg-gray-800 border-2 border-brand-gold/20 overflow-hidden relative group hover:border-brand-gold/50 transition-colors">
+                       <div className="h-40 rounded-2xl border-2 border-brand-gold/20 overflow-hidden relative group hover:border-brand-gold/50 transition-colors">
+                           <Image 
+                            src="/ssaagency-clienti-2.jpg" 
+                            alt="All'opera" 
+                            fill 
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-                           <span className="absolute bottom-4 left-4 text-white z-20 font-bold">Vibe ✨</span>
+                           <span className="absolute bottom-4 left-4 text-white z-20 font-bold">All'opera 🛠️</span>
                        </div>
                     </div>
                     <div className="space-y-4">
-                       <div className="h-40 rounded-2xl bg-gray-800 border-2 border-brand-gold/20 overflow-hidden relative group hover:border-brand-gold/50 transition-colors">
+                       <div className="h-40 rounded-2xl border-2 border-brand-gold/20 overflow-hidden relative group hover:border-brand-gold/50 transition-colors">
+                           <Image 
+                            src="/ssaagency-clienti-3.jpg" 
+                            alt="Food" 
+                            fill 
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-                           <span className="absolute bottom-4 left-4 text-white z-20 font-bold">Dettagli 🔍</span>
+                           <span className="absolute bottom-4 left-4 text-white z-20 font-bold">Food 🍝</span>
                        </div>
-                       <div className="h-64 rounded-2xl bg-gray-800 border-2 border-brand-gold/20 overflow-hidden relative group hover:border-brand-gold/50 transition-colors">
+                       <div className="h-64 rounded-2xl border-2 border-brand-gold/20 overflow-hidden relative group hover:border-brand-gold/50 transition-colors">
+                           <Image 
+                            src="/ssaagency-clienti-4.jpg" 
+                            alt="Lifestyle" 
+                            fill 
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
                            <span className="absolute bottom-4 left-4 text-white z-20 font-bold">Lifestyle 🥂</span>
                        </div>
@@ -250,7 +274,7 @@ export default function Home() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  className="w-full max-w-2xl bg-gradient-to-r from-[#1a1a1a] to-[#222] border border-brand-gold/20 p-6 rounded-2xl rounded-tl-none shadow-[0_0_30px_rgba(255,215,0,0.05)] relative text-left"
+                  className="w-full max-w-2xl bg-gradient-to-r from-[#1a1a1a] to-[#222] border border-brand-gold/20 p-6 rounded-2xl shadow-[0_0_30px_rgba(255,215,0,0.05)] relative text-left"
                 >
                   <div className="flex items-center gap-3 mb-3 border-b border-white/5 pb-3">
                      <div className="bg-brand-red/20 p-1.5 rounded-lg">
@@ -277,7 +301,7 @@ export default function Home() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  className="w-full max-w-2xl bg-gradient-to-r from-[#1a1a1a] to-[#222] border border-brand-gold/20 p-6 rounded-2xl rounded-tr-none shadow-[0_0_30px_rgba(255,215,0,0.05)] relative text-left"
+                  className="w-full max-w-2xl bg-gradient-to-r from-[#1a1a1a] to-[#222] border border-brand-gold/20 p-6 rounded-2xl shadow-[0_0_30px_rgba(255,215,0,0.05)] relative text-left"
                 >
                   <div className="flex items-center gap-3 mb-3 border-b border-white/5 pb-3">
                      <div className="bg-brand-red/20 p-1.5 rounded-lg">
@@ -303,7 +327,7 @@ export default function Home() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  className="w-full max-w-2xl bg-gradient-to-r from-[#1a1a1a] to-[#222] border border-brand-gold/20 p-6 rounded-2xl rounded-bl-none shadow-[0_0_30px_rgba(255,215,0,0.05)] relative text-left"
+                  className="w-full max-w-2xl bg-gradient-to-r from-[#1a1a1a] to-[#222] border border-brand-gold/20 p-6 rounded-2xl shadow-[0_0_30px_rgba(255,215,0,0.05)] relative text-left"
                 >
                   <div className="flex items-center gap-3 mb-3 border-b border-white/5 pb-3">
                      <div className="bg-brand-red/20 p-1.5 rounded-lg">
@@ -398,7 +422,7 @@ export default function Home() {
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-4xl md:text-5xl font-black mb-6">SEI PRONTO A <br /> <span className="text-brand-gold">DOMINARE?</span></h2>
               <p className="text-gray-300 text-lg">
-                Compila il modulo qui sotto. Niente spam, solo business.
+                Compila il modulo qui sotto.<br/>
                 Se vediamo che possiamo aiutarti, ti contatteremo per una strategia su misura.
               </p>
             </div>
@@ -412,7 +436,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="py-12 bg-black border-t border-white/5 text-center text-gray-600 text-sm">
         <p>&copy; {new Date().getFullYear()} SSA Agency. Tutti i diritti riservati.</p>
-        <p className="mt-2">P.IVA 12345678900 | Privacy Policy | Cookie Policy</p>
+        <p className="mt-2">P.IVA 12345678900</p>
       </footer>
     </main>
   );

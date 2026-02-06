@@ -29,6 +29,11 @@ export default function BookingForm() {
         throw new Error("Errore nell'invio del modulo. Riprova più tardi.");
       }
 
+      // Track Lead event
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        (window as any).fbq("track", "Lead");
+      }
+
       setSuccess(true);
     } catch (err) {
       setError("Si è verificato un errore. Per favore riprova.");
