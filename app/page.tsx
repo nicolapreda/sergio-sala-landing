@@ -66,7 +66,7 @@ export default function Home() {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 max-w-2xl leading-relaxed mx-auto font-medium">
-                Il sistema scientifico per aumentare il fatturato. <br/>
+                Il sistema per aumentare il fatturato. <br/>
                 <span className="text-white">Smetti di cercare like, inizia a trovare clienti.</span>
               </p>
 
@@ -79,7 +79,7 @@ export default function Home() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a 
-                  href="#metodo"
+                  href="#faq"
                   className="group bg-white/5 border border-white/10 hover:bg-white/10 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
                 >
                   Come Funziona? 🧐
