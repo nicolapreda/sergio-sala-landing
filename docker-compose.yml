@@ -1,14 +1,26 @@
+
 version: "3.8"
 
 services:
   nextjs:
     build: .
+    image: sergio-sala-landing-nextjs
     container_name: ssaagency
     restart: unless-stopped
     ports:
-      - "3001:3000"
+      - "3001:3001"
     networks:
       - nginx
+    env_file:
+      - .env
+    volumes:
+      - leads_data:/data
+    environment:
+      - DATA_DIR=/data
+
+volumes:
+  leads_data:
+    name: ssaagency_leads_data
 
 networks:
   nginx:

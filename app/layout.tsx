@@ -53,6 +53,10 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          type="text/javascript"
+          src="https://embeds.iubenda.com/widgets/e4552205-acc6-42b7-b17c-027171e93826.js"
+        />
       </head>
       <body className={inter.className}>
         {children}

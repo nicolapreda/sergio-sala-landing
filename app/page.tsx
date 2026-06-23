@@ -5,6 +5,15 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, TrendingUp, XCircle, Play, ShieldCheck, Trophy, Target } from "lucide-react";
 import { motion } from "framer-motion";
 import BookingForm from "@/components/BookingForm";
+import { useState, useEffect } from "react";
+
+interface VideoTestimonial {
+  id: number;
+  bunnyVideoId: string;
+  title: string;
+  personName: string | null;
+  embedUrl: string;
+}
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -13,6 +22,15 @@ const fadeIn = {
 };
 
 export default function Home() {
+  const [videos, setVideos] = useState<VideoTestimonial[]>([]);
+
+  useEffect(() => {
+    fetch('/api/videos')
+      .then((r) => r.json())
+      .then((data) => setVideos(data.videos || []))
+      .catch(() => {});
+  }, []);
+
   return (
     <main className="min-h-screen text-white overflow-x-hidden font-sans selection:bg-brand-red selection:text-white">
       
@@ -48,8 +66,8 @@ export default function Home() {
       </div>
 
       {/* HERO SECTION */}
-      <section className="pt-32 pb-10 px-4">
-        <div className="w-full max-w-[1400px] mx-auto rounded-[3rem] relative overflow-hidden bg-brand-dark/30 border border-white/5 backdrop-blur-sm p-8 md:p-16">
+      <section className="pt-32 pb-10 px-3 sm:px-4">
+        <div className="w-full max-w-[1400px] mx-auto rounded-[2rem] sm:rounded-[3rem] relative overflow-hidden bg-brand-dark/30 border border-white/5 backdrop-blur-sm p-5 sm:p-8 md:p-16">
            {/* Background Effects */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-red/10 blur-[120px] rounded-full -z-10 animate-pulse" />
           
@@ -60,9 +78,9 @@ export default function Home() {
               variants={fadeIn}
               className="space-y-8 flex flex-col items-center"
             >            
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black leading-tight md:leading-[0.9] tracking-tighter break-words max-w-full">
+              <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-[0.95] md:leading-[0.9] tracking-tighter break-words max-w-full">
                 TROVA NUOVI CLIENTI <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-yellow-200 to-brand-gold italic pr-2 drop-shadow-lg">SENZA FARE BALLETTI</span> 💃🚫
+                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-yellow-200 to-brand-gold italic pr-8 drop-shadow-lg">SENZA FARE BALLETTI</span> 💃🚫
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 max-w-2xl leading-relaxed mx-auto font-medium">
@@ -107,13 +125,12 @@ export default function Home() {
       </section>
 
       {/* PROBLEM SECTION */}
-      <section className="px-4 pb-4">
-        <div className="w-full max-w-[1400px] mx-auto rounded-[3rem] bg-brand-gray/50 border border-white/5 backdrop-blur-sm p-8 md:p-24">
-          <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="px-3 sm:px-4 pb-6 sm:pb-4">
+        <div className="w-full max-w-[1400px] mx-auto rounded-[2rem] sm:rounded-[3rem] bg-brand-gray/50 border border-white/5 backdrop-blur-sm p-5 sm:p-8 md:p-24">
+          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-black leading-tight text-white">
-                <span className="text-red-500">❌ STOP</span> AI VIDEO NOIOSI <br />
-                CHE NON GUARDA NESSUNO.
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight text-white">
+                <span className="text-red-500">❌ STOP</span> AI VIDEO NOIOSI CHE NON GUARDA NESSUNO.
               </h2>
               <div className="space-y-6">
                 <div className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
@@ -157,8 +174,8 @@ export default function Home() {
       {/* SOLUTION / METHOD */}
       {/* CLIENTS / METHOD */}
       {/* CLIENTS / METHOD */}
-      <section id="metodo" className="px-4 pb-4">
-        <div className="w-full max-w-[1400px] mx-auto rounded-[3rem] bg-brand-dark border border-white/5 overflow-hidden p-8 md:p-24 relative">
+      <section id="metodo" className="px-3 sm:px-4 pb-6 sm:pb-4">
+        <div className="w-full max-w-[1400px] mx-auto rounded-[2rem] sm:rounded-[3rem] bg-brand-dark border border-white/5 overflow-hidden p-5 sm:p-8 md:p-24 relative">
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               
@@ -257,12 +274,12 @@ export default function Home() {
       </section>
 
       {/* RESULT / TESTIMONIALS */}
-      <section id="risultati" className="px-4 pb-4">
-        <div className="w-full max-w-[1400px] mx-auto rounded-[3rem] bg-brand-dark border border-white/5 relative overflow-hidden p-8 md:p-24">
+      <section id="risultati" className="px-3 sm:px-4 pb-6 sm:pb-4">
+        <div className="w-full max-w-[1400px] mx-auto rounded-[2rem] sm:rounded-[3rem] bg-brand-dark border border-white/5 relative overflow-hidden p-5 sm:p-8 md:p-24">
            {/* Background Glow */}
            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 blur-[100px] rounded-full -z-10" />
 
-           <div className="container mx-auto px-6 max-w-4xl text-center">
+           <div className="container mx-auto max-w-4xl text-center">
               <h2 className="text-4xl md:text-5xl font-black mb-12 relative inline-block">
                 Le nostre recensioni 🗨️
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-50" />
@@ -363,10 +380,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* VIDEO TESTIMONIALS */}
+      {videos.length > 0 && (
+        <section id="video-testimonianze" className="px-3 sm:px-4 pb-6 sm:pb-4">
+          <div className="w-full max-w-[1400px] mx-auto rounded-[2rem] sm:rounded-[3rem] bg-brand-dark border border-white/5 relative overflow-hidden p-5 sm:p-8 md:p-24">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-red/8 blur-[100px] rounded-full -z-10" />
+
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-black relative inline-block">
+                Ascolta i nostri clienti 🎬
+                <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-50" />
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {videos.map((video) => (
+                <motion.div
+                  key={video.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="rounded-2xl overflow-hidden border border-white/10 bg-white/3 hover:border-brand-gold/30 transition-all group"
+                >
+                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <iframe
+                      src={video.embedUrl}
+                      className="absolute inset-0 w-full h-full"
+                      allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                      allowFullScreen
+                    />
+                  </div>
+                  {(video.personName || video.title) && (
+                    <div className="p-4 border-t border-white/5">
+                      {video.personName && (
+                        <p className="font-bold text-white text-sm">{video.personName}</p>
+                      )}
+                      <p className="text-gray-400 text-xs mt-0.5 leading-relaxed">{video.title}</p>
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <a
+                href="#booking"
+                className="inline-flex items-center gap-2 bg-transparent border border-brand-gold text-brand-gold px-8 py-4 rounded-full font-bold text-lg hover:bg-brand-gold hover:text-black transition-all group"
+              >
+                Voglio questi risultati
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CHI SIAMO SECTION */}
-      <section id="chi-siamo" className="px-4 pb-4">
-        <div className="w-full max-w-[1400px] mx-auto rounded-[3rem] bg-brand-dark/50 border border-white/5 relative p-8 md:p-24">
-           <div className="container mx-auto px-6 max-w-4xl text-center">
+      <section id="chi-siamo" className="px-3 sm:px-4 pb-6 sm:pb-4">
+        <div className="w-full max-w-[1400px] mx-auto rounded-[2rem] sm:rounded-[3rem] bg-brand-dark/50 border border-white/5 relative p-5 sm:p-8 md:p-24">
+           <div className="container mx-auto max-w-4xl text-center">
               <h2 className="text-4xl md:text-5xl font-black mb-12">CHI SIAMO 👋</h2>
               <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
                  Non siamo la solita agenzia di marketing. Siamo il tuo partner strategico. 
@@ -380,9 +452,9 @@ export default function Home() {
 
       {/* FAQ SECTION */}
       {/* FAQ SECTION */}
-      <section id="faq" className="px-4 pb-4">
-        <div className="w-full max-w-[1400px] mx-auto rounded-[3rem] bg-brand-dark/20 border border-white/5 relative overflow-hidden p-8 md:p-24">
-           <div className="container mx-auto px-6 max-w-3xl">
+      <section id="faq" className="px-3 sm:px-4 pb-6 sm:pb-4">
+        <div className="w-full max-w-[1400px] mx-auto rounded-[2rem] sm:rounded-[3rem] bg-brand-dark/20 border border-white/5 relative overflow-hidden p-5 sm:p-8 md:p-24">
+           <div className="container mx-auto max-w-3xl">
               <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-white">FAQ 🤔</h2>
               
               <div className="space-y-4">
@@ -414,11 +486,11 @@ export default function Home() {
 
       {/* BOOKING SECTION */}
       {/* BOOKING SECTION */}
-      <section id="booking" className="px-4 pb-24">
-        <div className="w-full max-w-[1400px] mx-auto rounded-[3rem] relative overflow-hidden p-8 md:p-24 border border-white/5">
+      <section id="booking" className="px-3 sm:px-4 pb-24">
+        <div className="w-full max-w-[1400px] mx-auto rounded-[2rem] sm:rounded-[3rem] relative overflow-hidden p-5 sm:p-8 md:p-24 border border-white/5">
           <div className="absolute inset-0 bg-gradient-to-b from-brand-dark to-brand-red/10 -z-10" />
-          
-          <div className="container mx-auto px-6">
+
+          <div className="container mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-4xl md:text-5xl font-black mb-6">SEI PRONTO A <br /> <span className="text-brand-gold">DOMINARE?</span></h2>
               <p className="text-gray-300 text-lg">
@@ -436,7 +508,23 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="py-12 bg-black border-t border-white/5 text-center text-gray-600 text-sm">
         <p>&copy; {new Date().getFullYear()} SSA Agency. Tutti i diritti riservati.</p>
-        <p className="mt-2">P.IVA 12345678900</p>
+        <p className="mt-2">P.IVA 04667720165</p>
+        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a 
+            href="https://www.iubenda.com/privacy-policy/28501125" 
+            className="iubenda-white iubenda-noiframe iubenda-embed hover:opacity-80 transition-opacity px-4 py-2 border border-white/10 rounded-lg text-gray-400 hover:text-white" 
+            title="Privacy Policy"
+          >
+            Privacy Policy
+          </a>
+          <a 
+            href="https://www.iubenda.com/privacy-policy/28501125/cookie-policy" 
+            className="iubenda-white iubenda-noiframe iubenda-embed hover:opacity-80 transition-opacity px-4 py-2 border border-white/10 rounded-lg text-gray-400 hover:text-white" 
+            title="Cookie Policy"
+          >
+            Cookie Policy
+          </a>
+        </div>
       </footer>
     </main>
   );

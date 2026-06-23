@@ -56,7 +56,7 @@ export default function BookingForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto bg-brand-gray/30 p-8 md:p-10 rounded-3xl border border-white/10 shadow-2xl backdrop-blur-md">
+    <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto bg-brand-gray/30 p-6 md:p-10 rounded-3xl border border-white/10 shadow-2xl backdrop-blur-md">
       <div className="text-center mb-8">
            <h3 className="text-2xl font-bold text-white mb-2">Analisi Gratuita 📊</h3>
            <p className="text-gray-400 text-sm">Scopri come riempire il tuo locale.</p>

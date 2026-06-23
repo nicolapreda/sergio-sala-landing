@@ -1,0 +1,117 @@
+[
+  {
+    "email": "ilsala41sergio@gmail.com",
+    "phone": "3405953406",
+    "firstName": "Prova",
+    "lastName": "riattivazione ",
+    "name": "Prova riattivazione ",
+    "tags": [
+      "Landing SSA"
+    ],
+    "source": "landing-page",
+    "dateAdded": "2026-01-27T13:20:16.155Z",
+    "customFields": [
+      {
+        "key": "business_type",
+        "field_value": "centro-benessere"
+      },
+      {
+        "key": "challenge",
+        "field_value": "Prova marketing "
+      }
+    ],
+    "timestamp": "2026-01-27T13:20:16.521Z"
+  },
+  {
+    "email": "prova@gmail.com",
+    "phone": "3405953405",
+    "firstName": "Prova",
+    "lastName": "test ",
+    "name": "Prova test ",
+    "tags": [
+      "Landing SSA"
+    ],
+    "source": "landing-page",
+    "dateAdded": "2026-01-27T13:21:35.209Z",
+    "customFields": [
+      {
+        "key": "business_type",
+        "field_value": "e-commerce"
+      },
+      {
+        "key": "challenge",
+        "field_value": "Non specificato"
+      }
+    ],
+    "timestamp": "2026-01-27T13:21:35.377Z"
+  },
+  {
+    "email": "ilsala41serg@icloud.com",
+    "phone": "3405953444",
+    "firstName": "Sergio",
+    "lastName": "Sasss",
+    "name": "Sergio Sasss",
+    "tags": [
+      "Landing SSA"
+    ],
+    "source": "landing-page",
+    "dateAdded": "2026-01-27T13:29:32.149Z",
+    "customFields": [
+      {
+        "key": "business_type",
+        "field_value": "studio-medico"
+      },
+      {
+        "key": "challenge",
+        "field_value": "Non specificato"
+      }
+    ],
+    "timestamp": "2026-01-27T13:29:32.688Z"
+  },
+  {
+    "email": "fsdjf@gfjidg.it",
+    "phone": "3703105949",
+    "firstName": "fsdf",
+    "lastName": "",
+    "name": "fsdf",
+    "tags": [
+      "Landing SSA"
+    ],
+    "source": "landing-page",
+    "dateAdded": "2026-01-29T09:13:48.437Z",
+    "customFields": [
+      {
+        "key": "business_type",
+        "field_value": "consulente"
+      },
+      {
+        "key": "challenge",
+        "field_value": "sdf"
+      }
+    ],
+    "timestamp": "2026-01-29T09:13:48.675Z"
+  },
+  {
+    "email": "CIAO@preda.it",
+    "phone": "349539453",
+    "firstName": "prova",
+    "lastName": "ultimissima!!",
+    "name": "prova ultimissima!!",
+    "tags": [
+      "Landing SSA"
+    ],
+    "source": "landing-page",
+    "dateAdded": "2026-01-29T11:53:25.883Z",
+    "customFields": [
+      {
+        "key": "business_type",
+        "field_value": "e-commerce"
+      },
+      {
+        "key": "challenge",
+        "field_value": "dfgdf"
+      }
+    ],
+    "timestamp": "2026-01-29T11:53:26.089Z"
+  }
+]
